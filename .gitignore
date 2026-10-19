@@ -303,11 +303,12 @@
         // =========================================================================
         const products = [
             { 
-                id: 1, name: "Velvet Matte Lipstick - Rose Blush", weight: "3.5 g", price: 299, oldPrice: 450, 
-                desc: "Highly pigmented matte formula that glides on smoothly. Lasts up to 12 hours without drying your lips.",
-                images: ["https://placehold.co/400x400/fce7f3/db2777?text=Lipstick+Main", "https://placehold.co/400x400/fdf2f8/9d174d?text=Lipstick+Open", "https://placehold.co/400x400/fbcfe8/be185d?text=Swatch"]
-            },
-            { 
+                id: 1, name: "Forever 52- Pro Artist Foundation", weight: "60 ml price: 1529, oldPrice: 1799, 
+                desc: "Ultra Definition Liquid Foundation Smudge-proof waterproof long lasting matte Finish.",
+                images: [ https://share.google/5lzOSsGtbbTOmliLz 
+https://share.google/56IMJrUzLy0nHUk4b]
+           
+          
                 id: 2, name: "Flawless Liquid Foundation", weight: "30 ml", price: 549, oldPrice: 799, 
                 desc: "Medium to full coverage foundation that blends seamlessly for a natural, dewy finish. Suitable for all skin types.",
                 images: ["https://placehold.co/400x400/ffedd5/c2410c?text=Foundation+Main", "https://placehold.co/400x400/fff7ed/9a3412?text=Bottle", "https://placehold.co/400x400/fed7aa/ea580c?text=Shade"]
