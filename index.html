@@ -1291,81 +1291,980 @@ const products = [
         ]
     },
 
-    // --- 15 EXTRA PLACEHOLDER ITEMS (ID 96 TO 110) ---
+  // --- MISSING SWISS BEAUTY CATALOGUE PRODUCTS (ID 96 TO 204) ---
     { 
-        id: 96, name: "Item Placeholder 1", price: 350, oldPrice: 499, 
-        desc: "Item details will go here.",
-        shades: [{ id: "p96-s1", name: "Standard", color: "#FFFFFF", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=Item+96+Pic+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=Item+96+Pic+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=Item+96+Pic+3"] }]
+        id: 96, name: "Swiss Beauty Care Glow Fusion Face Wash (100 g)", price: 189, oldPrice: 229, 
+        desc: "Gentle deep-cleansing formula with 2% Niacinamide and Marigold Extract for radiant skin.",
+        shades: [{ id: "p96-s1", name: "Standard", color: "#F9A8D4", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=Glow+Fusion+FW+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=Glow+Fusion+FW+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=Glow+Fusion+FW+3"] }]
     },
     { 
-        id: 97, name: "Item Placeholder 2", price: 450, oldPrice: 599, 
-        desc: "Item details will go here.",
-        shades: [{ id: "p97-s1", name: "Standard", color: "#FFFFFF", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=Item+97+Pic+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=Item+97+Pic+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=Item+97+Pic+3"] }]
+        id: 97, name: "Swiss Beauty Care Glow Fusion Face Toner (100 ml)", price: 249, oldPrice: 299, 
+        desc: "Soothing and hydrating toner with 3% Niacinamide and Cucumber Extract to tighten pores.",
+        shades: [{ id: "p97-s1", name: "Standard", color: "#F9A8D4", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=Glow+Fusion+Toner+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=Glow+Fusion+Toner+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=Glow+Fusion+Toner+3"] }]
     },
     { 
-        id: 98, name: "Item Placeholder 3", price: 299, oldPrice: 399, 
-        desc: "Item details will go here.",
-        shades: [{ id: "p98-s1", name: "Standard", color: "#FFFFFF", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=Item+98+Pic+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=Item+98+Pic+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=Item+98+Pic+3"] }]
+        id: 98, name: "Swiss Beauty Care Glow Fusion Face Serum (10% Vitamin C)", price: 499, oldPrice: 599, 
+        desc: "Lightweight serum with 10% Vitamin C and Sakura Extract to reduce dark spots and dullness.",
+        shades: [
+            { id: "p98-s1", name: "30 ml (Rs 499)", color: "#F472B6", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=Glow+Serum+30ml+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=Glow+Serum+30ml+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=Glow+Serum+30ml+3"] },
+            { id: "p98-s2", name: "15 ml (Rs 249)", color: "#F9A8D4", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=Glow+Serum+15ml+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=Glow+Serum+15ml+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=Glow+Serum+15ml+3"] }
+        ]
     },
     { 
-        id: 99, name: "Item Placeholder 4", price: 550, oldPrice: 750, 
-        desc: "Item details will go here.",
-        shades: [{ id: "p99-s1", name: "Standard", color: "#FFFFFF", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=Item+99+Pic+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=Item+99+Pic+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=Item+99+Pic+3"] }]
+        id: 99, name: "Swiss Beauty Care Glow Fusion Sunscreen SPF 50 PA++++", price: 299, oldPrice: 349, 
+        desc: "Quick-absorbing, no-white-cast sunscreen with 1% Niacinamide and Raspberry Extract.",
+        shades: [
+            { id: "p99-s1", name: "50 g (Rs 299)", color: "#FACC15", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=Glow+Sunscreen+50g+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=Glow+Sunscreen+50g+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=Glow+Sunscreen+50g+3"] },
+            { id: "p99-s2", name: "10 g (Rs 149)", color: "#FDE047", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=Glow+Sunscreen+10g+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=Glow+Sunscreen+10g+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=Glow+Sunscreen+10g+3"] }
+        ]
     },
     { 
-        id: 100, name: "Item Placeholder 5", price: 199, oldPrice: 299, 
-        desc: "Item details will go here.",
-        shades: [{ id: "p100-s1", name: "Standard", color: "#FFFFFF", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=Item+100+Pic+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=Item+100+Pic+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=Item+100+Pic+3"] }]
+        id: 100, name: "Swiss Beauty Care Dew Lock Face Serum (2% Hyaluronic Acid)", price: 399, oldPrice: 499, 
+        desc: "Moisturising serum with 2% Hyaluronic Acid and Blueberry Extract for 24-hour hydration.",
+        shades: [
+            { id: "p100-s1", name: "30 ml (Rs 399)", color: "#38BDF8", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=DewLock+Serum+30ml+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=DewLock+Serum+30ml+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=DewLock+Serum+30ml+3"] },
+            { id: "p100-s2", name: "15 ml (Rs 199)", color: "#7DD3FC", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=DewLock+Serum+15ml+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=DewLock+Serum+15ml+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=DewLock+Serum+15ml+3"] }
+        ]
     },
     { 
-        id: 101, name: "Item Placeholder 6", price: 899, oldPrice: 1099, 
-        desc: "Item details will go here.",
-        shades: [{ id: "p101-s1", name: "Standard", color: "#FFFFFF", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=Item+101+Pic+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=Item+101+Pic+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=Item+101+Pic+3"] }]
+        id: 101, name: "Swiss Beauty Care Dew Lock Day Cream with SPF 15 PA+++ (50 g)", price: 299, oldPrice: 349, 
+        desc: "Lightweight day moisturiser with SPF 15 PA+++, 2% Aqua Neo, and Blueberry Extract.",
+        shades: [{ id: "p101-s1", name: "Standard", color: "#38BDF8", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=DewLock+DayCream+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=DewLock+DayCream+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=DewLock+DayCream+3"] }]
     },
     { 
-        id: 102, name: "Item Placeholder 7", price: 399, oldPrice: 499, 
-        desc: "Item details will go here.",
-        shades: [{ id: "p102-s1", name: "Standard", color: "#FFFFFF", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=Item+102+Pic+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=Item+102+Pic+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=Item+102+Pic+3"] }]
+        id: 102, name: "Swiss Beauty Care Dew Lock Face Wash (100 g)", price: 189, oldPrice: 229, 
+        desc: "Hydrating gel face wash with 1% Hyaluronic Acid, Centella, Niacinamide, and Lactic Acid.",
+        shades: [{ id: "p102-s1", name: "Standard", color: "#38BDF8", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=DewLock+FW+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=DewLock+FW+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=DewLock+FW+3"] }]
     },
     { 
-        id: 103, name: "Item Placeholder 8", price: 499, oldPrice: 649, 
-        desc: "Item details will go here.",
-        shades: [{ id: "p103-s1", name: "Standard", color: "#FFFFFF", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=Item+103+Pic+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=Item+103+Pic+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=Item+103+Pic+3"] }]
+        id: 103, name: "Swiss Beauty Care Dew Lock Daily Moisturiser (50 g)", price: 249, oldPrice: 299, 
+        desc: "Non-greasy daily moisturiser with 1% Hyaluronic Acid and Blueberry Extract.",
+        shades: [{ id: "p103-s1", name: "Standard", color: "#38BDF8", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=DewLock+Moisturiser+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=DewLock+Moisturiser+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=DewLock+Moisturiser+3"] }]
     },
     { 
-        id: 104, name: "Item Placeholder 9", price: 650, oldPrice: 799, 
-        desc: "Item details will go here.",
-        shades: [{ id: "p104-s1", name: "Standard", color: "#FFFFFF", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=Item+104+Pic+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=Item+104+Pic+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=Item+104+Pic+3"] }]
+        id: 104, name: "Swiss Beauty Care Dew Lock Sunscreen SPF 50 PA+++ (50 g)", price: 299, oldPrice: 349, 
+        desc: "Dewy, no-white-cast sunscreen with 1% Hyaluronic Acid and Oat Extract.",
+        shades: [{ id: "p104-s1", name: "Standard", color: "#38BDF8", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=DewLock+Sunscreen+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=DewLock+Sunscreen+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=DewLock+Sunscreen+3"] }]
     },
     { 
-        id: 105, name: "Item Placeholder 10", price: 250, oldPrice: 349, 
-        desc: "Item details will go here.",
-        shades: [{ id: "p105-s1", name: "Standard", color: "#FFFFFF", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=Item+105+Pic+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=Item+105+Pic+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=Item+105+Pic+3"] }]
+        id: 105, name: "Swiss Beauty Care Youth-Full Collagen Boost Mask (34 g)", price: 149, oldPrice: 199, 
+        desc: "Melting hydrogel mask enriched with Collagen and 17 Amino Acids for plump, dewy skin.",
+        shades: [{ id: "p105-s1", name: "Standard", color: "#F9A8D4", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=Collagen+Boost+Mask+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=Collagen+Boost+Mask+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=Collagen+Boost+Mask+3"] }]
     },
     { 
-        id: 106, name: "Item Placeholder 11", price: 799, oldPrice: 999, 
-        desc: "Item details will go here.",
-        shades: [{ id: "p106-s1", name: "Standard", color: "#FFFFFF", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=Item+106+Pic+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=Item+106+Pic+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=Item+106+Pic+3"] }]
+        id: 106, name: "Swiss Beauty Care Collagen Glow Peel Off Mask (100 g)", price: 249, oldPrice: 299, 
+        desc: "Radiance-boosting peel-off mask with Collagen, Rice Water, Hyaluronic Acid, and Niacinamide.",
+        shades: [{ id: "p106-s1", name: "Standard", color: "#F9A8D4", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=Collagen+PeelOff+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=Collagen+PeelOff+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=Collagen+PeelOff+3"] }]
     },
     { 
-        id: 107, name: "Item Placeholder 12", price: 320, oldPrice: 420, 
-        desc: "Item details will go here.",
-        shades: [{ id: "p107-s1", name: "Standard", color: "#FFFFFF", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=Item+107+Pic+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=Item+107+Pic+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=Item+107+Pic+3"] }]
+        id: 107, name: "Swiss Beauty Care 6-Step Facial Kit", price: 249, oldPrice: 299, 
+        desc: "6-step DIY facial ritual for instant brightness, hydration, and bridal glow.",
+        shades: [
+            { id: "p107-s1", name: "D-Tan Pro-Glow (49g)", color: "#F59E0B", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=DTan+ProGlow+Kit+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=DTan+ProGlow+Kit+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=DTan+ProGlow+Kit+3"] },
+            { id: "p107-s2", name: "Hydra Boost (49g)", color: "#38BDF8", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=Hydra+Boost+Kit+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=Hydra+Boost+Kit+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=Hydra+Boost+Kit+3"] },
+            { id: "p107-s3", name: "Bride & Bright (36g)", color: "#F472B6", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=Bride+Bright+Kit+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=Bride+Bright+Kit+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=Bride+Bright+Kit+3"] }
+        ]
     },
     { 
-        id: 108, name: "Item Placeholder 13", price: 599, oldPrice: 749, 
-        desc: "Item details will go here.",
-        shades: [{ id: "p108-s1", name: "Standard", color: "#FFFFFF", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=Item+108+Pic+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=Item+108+Pic+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=Item+108+Pic+3"] }]
+        id: 108, name: "Swiss Beauty Hydra Eye Serum Patch (60 Pcs)", price: 349, oldPrice: 449, 
+        desc: "Anti-wrinkle hydrogel eye serum patches to reduce dark circles, puffiness, and fine lines.",
+        shades: [
+            { id: "p108-s1", name: "01 Aloe Vera", color: "#10B981", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=EyePatch+AloeVera+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=EyePatch+AloeVera+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=EyePatch+AloeVera+3"] },
+            { id: "p108-s2", name: "02 Vitamin C", color: "#F59E0B", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=EyePatch+VitC+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=EyePatch+VitC+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=EyePatch+VitC+3"] },
+            { id: "p108-s3", name: "03 Coffee", color: "#78350F", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=EyePatch+Coffee+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=EyePatch+Coffee+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=EyePatch+Coffee+3"] }
+        ]
     },
     { 
-        id: 109, name: "Item Placeholder 14", price: 420, oldPrice: 550, 
-        desc: "Item details will go here.",
-        shades: [{ id: "p109-s1", name: "Standard", color: "#FFFFFF", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=Item+109+Pic+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=Item+109+Pic+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=Item+109+Pic+3"] }]
+        id: 109, name: "Swiss Beauty Hydrating & Detox Sheet Mask (20 ml)", price: 69, oldPrice: 99, 
+        desc: "Rejuvenating sheet mask enriched with Hyaluronic Acid to refresh skin and shrink pores.",
+        shades: [
+            { id: "p109-s1", name: "01 Rice Water & Niacinamide", color: "#F3F4F6", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=SB+Sheet+RiceWater+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=SB+Sheet+RiceWater+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=SB+Sheet+RiceWater+3"] },
+            { id: "p109-s2", name: "02 Lemon & Vitamin C", color: "#FACC15", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=SB+Sheet+Lemon+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=SB+Sheet+Lemon+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=SB+Sheet+Lemon+3"] },
+            { id: "p109-s3", name: "03 Rose & Collagen", color: "#F43F5E", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=SB+Sheet+Rose+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=SB+Sheet+Rose+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=SB+Sheet+Rose+3"] },
+            { id: "p109-s4", name: "04 Tea Tree & Salicylic Acid", color: "#10B981", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=SB+Sheet+TeaTree+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=SB+Sheet+TeaTree+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=SB+Sheet+TeaTree+3"] },
+            { id: "p109-s5", name: "05 Aqua & Hyaluronic Acid", color: "#38BDF8", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=SB+Sheet+Aqua+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=SB+Sheet+Aqua+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=SB+Sheet+Aqua+3"] },
+            { id: "p109-s6", name: "06 Charcoal & Bamboo", color: "#1F2937", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=SB+Sheet+Charcoal+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=SB+Sheet+Charcoal+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=SB+Sheet+Charcoal+3"] }
+        ]
     },
     { 
-        id: 110, name: "Item Placeholder 15", price: 950, oldPrice: 1199, 
+        id: 110, name: "Swiss Beauty Oil Control Primer (30 g)", price: 249, oldPrice: 299, 
+        desc: "Pore-blurring velvety matte primer with Hyaluronic Acid and Carrot Seed Oil.",
+        shades: [{ id: "p110-s1", name: "Standard", color: "#FBCFE8", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=Oil+Control+Primer+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=Oil+Control+Primer+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=Oil+Control+Primer+3"] }]
+    },
+    { 
+        id: 111, name: "Swiss Beauty Hold Me Grip Primer (24 ml)", price: 449, oldPrice: 549, 
+        desc: "Long-lasting gel gripping primer enriched with Niacinamide and Centella Asiatica.",
+        shades: [{ id: "p111-s1", name: "Standard", color: "#F9A8D4", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=Hold+Me+Grip+Primer+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=Hold+Me+Grip+Primer+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=Hold+Me+Grip+Primer+3"] }]
+    },
+    { 
+        id: 112, name: "Swiss Beauty Perfect Match Panstick (7.5 g)", price: 299, oldPrice: 375, 
+        desc: "Full coverage, water-resistant foundation and concealer stick for quick touch-ups.",
+        shades: [
+            { id: "p112-s1", name: "01 Natural", color: "#F5D6B8", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=Panstick+01+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=Panstick+01+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=Panstick+01+3"] },
+            { id: "p112-s2", name: "02", color: "#ECC8A6", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=Panstick+02+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=Panstick+02+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=Panstick+02+3"] },
+            { id: "p112-s3", name: "03", color: "#E2BA95", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=Panstick+03+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=Panstick+03+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=Panstick+03+3"] },
+            { id: "p112-s4", name: "04", color: "#D8AC84", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=Panstick+04+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=Panstick+04+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=Panstick+04+3"] }
+        ]
+    },
+    { 
+        id: 113, name: "Swiss Beauty Cover Studio Ultra Base Concealer Palette (19 g)", price: 599, oldPrice: 699, 
+        desc: "8-shade professional colour correcting, contouring, and concealing studio palette.",
+        shades: [
+            { id: "p113-s1", name: "Palette 01", color: "#E6B892", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=CoverStudio+01+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=CoverStudio+01+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=CoverStudio+01+3"] },
+            { id: "p113-s2", name: "Palette 02", color: "#D49E71", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=CoverStudio+02+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=CoverStudio+02+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=CoverStudio+02+3"] },
+            { id: "p113-s3", name: "Palette 03 (Color Corrector)", color: "#C6986A", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=CoverStudio+03+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=CoverStudio+03+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=CoverStudio+03+3"] }
+        ]
+    },
+    { 
+        id: 114, name: "Swiss Beauty Daily Wear Lightweight Foundation (40 g)", price: 329, oldPrice: 399, 
+        desc: "Oil-free, non-comedogenic daily wear foundation for a fresh, natural finish.",
+        shades: [
+            { id: "p114-s1", name: "Shade 01", color: "#F7DEC8", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=DailyWear+01+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=DailyWear+01+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=DailyWear+01+3"] },
+            { id: "p114-s2", name: "Shade 02", color: "#EBC5A4", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=DailyWear+02+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=DailyWear+02+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=DailyWear+02+3"] },
+            { id: "p114-s3", name: "Shade 03", color: "#DFB38C", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=DailyWear+03+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=DailyWear+03+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=DailyWear+03+3"] },
+            { id: "p114-s4", name: "Shade 04", color: "#CFA07A", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=DailyWear+04+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=DailyWear+04+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=DailyWear+04+3"] }
+        ]
+    },
+    { 
+        id: 115, name: "Swiss Beauty Primer Mousse Foundation (30 ml)", price: 499, oldPrice: 599, 
+        desc: "Feather-light, oil-control mousse foundation with a smooth matte finish.",
+        shades: [
+            { id: "p115-s1", name: "Shade 01", color: "#F7DEC8", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=PrimerMousse+01+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=PrimerMousse+01+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=PrimerMousse+01+3"] },
+            { id: "p115-s2", name: "Shade 02", color: "#EBC5A4", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=PrimerMousse+02+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=PrimerMousse+02+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=PrimerMousse+02+3"] },
+            { id: "p115-s3", name: "Shade 03", color: "#DFB38C", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=PrimerMousse+03+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=PrimerMousse+03+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=PrimerMousse+03+3"] }
+        ]
+    },
+    { 
+        id: 116, name: "Swiss Beauty Flawless Complexion Foundation (40 ml)", price: 229, oldPrice: 299, 
+        desc: "Weightless, oil-free foundation providing medium coverage and a semi-matte finish.",
+        shades: [
+            { id: "p116-s1", name: "01 Ivory Fair", color: "#F9E4CF", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=FlawlessFound+01+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=FlawlessFound+01+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=FlawlessFound+01+3"] },
+            { id: "p116-s2", name: "02 Ivory Rose", color: "#F4D5B6", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=FlawlessFound+02+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=FlawlessFound+02+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=FlawlessFound+02+3"] },
+            { id: "p116-s3", name: "03 Neutral Beige", color: "#E8C396", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=FlawlessFound+03+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=FlawlessFound+03+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=FlawlessFound+03+3"] },
+            { id: "p116-s4", name: "04 Medium Nude", color: "#D8AC84", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=FlawlessFound+04+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=FlawlessFound+04+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=FlawlessFound+04+3"] },
+            { id: "p116-s5", name: "05 Sand Pale", color: "#C8966E", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=FlawlessFound+05+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=FlawlessFound+05+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=FlawlessFound+05+3"] },
+            { id: "p116-s6", name: "06 Beige", color: "#B8845B", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=FlawlessFound+06+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=FlawlessFound+06+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=FlawlessFound+06+3"] }
+        ]
+    },
+    { 
+        id: 117, name: "Swiss Beauty Airbrush Finish Full Coverage Foundation (30 ml)", price: 529, oldPrice: 649, 
+        desc: "8-hour full coverage foundation enriched with Hyaluronic Acid, Vitamin E, and Aloe Vera.",
+        shades: [
+            { id: "p117-s1", name: "01 Shell", color: "#F7DEC8", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=AirbrushFound+01+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=AirbrushFound+01+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=AirbrushFound+01+3"] },
+            { id: "p117-s2", name: "02", color: "#EBC5A4", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=AirbrushFound+02+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=AirbrushFound+02+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=AirbrushFound+02+3"] },
+            { id: "p117-s3", name: "03 Nude", color: "#DFB38C", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=AirbrushFound+03+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=AirbrushFound+03+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=AirbrushFound+03+3"] },
+            { id: "p117-s4", name: "04 Golden", color: "#CFA07A", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=AirbrushFound+04+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=AirbrushFound+04+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=AirbrushFound+04+3"] }
+        ]
+    },
+    { 
+        id: 118, name: "Swiss Beauty Shiny Pearl Water Drop BB Foundation (40 ml)", price: 229, oldPrice: 299, 
+        desc: "Sheer coverage, Niacinamide-enriched Blemish Balm BB foundation for a glowing look.",
+        shades: [
+            { id: "p118-s1", name: "01 Cream", color: "#F7DEC8", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=ShinyPearl+BB+01+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=ShinyPearl+BB+01+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=ShinyPearl+BB+01+3"] },
+            { id: "p118-s2", name: "02", color: "#EBC5A4", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=ShinyPearl+BB+02+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=ShinyPearl+BB+02+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=ShinyPearl+BB+02+3"] },
+            { id: "p118-s3", name: "03", color: "#DFB38C", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=ShinyPearl+BB+03+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=ShinyPearl+BB+03+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=ShinyPearl+BB+03+3"] }
+        ]
+    },
+    { 
+        id: 119, name: "Swiss Beauty Tradition Liquid Sindoor (6 ml)", price: 129, oldPrice: 169, 
+        desc: "Super pigmented, sweat-proof liquid sindoor with a sponge-tip applicator.",
+        shades: [
+            { id: "p119-s1", name: "01 True Red", color: "#DC2626", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=Sindoor+Red+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=Sindoor+Red+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=Sindoor+Red+3"] },
+            { id: "p119-s2", name: "02 Maroon", color: "#7F1D1D", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=Sindoor+Maroon+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=Sindoor+Maroon+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=Sindoor+Maroon+3"] }
+        ]
+    },
+    { 
+        id: 120, name: "Swiss Beauty Prime & Fine Matte Pressed Powder SPF 15 (8 g)", price: 349, oldPrice: 429, 
+        desc: "Weightless oil-absorbing pressed powder with SPF 15 and medium matte coverage.",
+        shades: [
+            { id: "p120-s1", name: "01 Classic Ivory", color: "#F7DEC8", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=PrimeFine+01+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=PrimeFine+01+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=PrimeFine+01+3"] },
+            { id: "p120-s2", name: "02 Very Natural", color: "#F0CCA8", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=PrimeFine+02+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=PrimeFine+02+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=PrimeFine+02+3"] },
+            { id: "p120-s3", name: "03 Nude Beige", color: "#E6BA92", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=PrimeFine+03+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=PrimeFine+03+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=PrimeFine+03+3"] },
+            { id: "p120-s4", name: "04 Natural Beige", color: "#DCB082", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=PrimeFine+04+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=PrimeFine+04+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=PrimeFine+04+3"] },
+            { id: "p120-s5", name: "05 Warm Nude", color: "#D0A070", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=PrimeFine+05+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=PrimeFine+05+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=PrimeFine+05+3"] },
+            { id: "p120-s6", name: "06 Caramel Beige", color: "#C28E5C", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=PrimeFine+06+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=PrimeFine+06+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=PrimeFine+06+3"] }
+        ]
+    },
+    { 
+        id: 121, name: "Swiss Beauty Double Duty 2-in-1 Compact Powder (18 g)", price: 399, oldPrice: 499, 
+        desc: "Dual-layer compact powder with Vitamin E and Hyaluronic Acid for day and night looks.",
+        shades: [
+            { id: "p121-s1", name: "01 Ivory", color: "#F7DEC8", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=DoubleDuty+01+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=DoubleDuty+01+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=DoubleDuty+01+3"] },
+            { id: "p121-s2", name: "02 Vanilla", color: "#EBC5A4", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=DoubleDuty+02+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=DoubleDuty+02+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=DoubleDuty+02+3"] },
+            { id: "p121-s3", name: "03", color: "#DFB38C", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=DoubleDuty+03+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=DoubleDuty+03+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=DoubleDuty+03+3"] },
+            { id: "p121-s4", name: "04", color: "#CFA07A", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=DoubleDuty+04+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=DoubleDuty+04+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=DoubleDuty+04+3"] }
+        ]
+    },
+    { 
+        id: 122, name: "Swiss Beauty Everyday Matte Compact Powder SPF 10 (9 g)", price: 199, oldPrice: 249, 
+        desc: "Super-fine oil-control compact powder enriched with Vitamin E and SPF 10.",
+        shades: [
+            { id: "p122-s1", name: "01 Ivory", color: "#F7DEC8", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=EverydayCompact+01+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=EverydayCompact+01+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=EverydayCompact+01+3"] },
+            { id: "p122-s2", name: "02 Beige", color: "#EBC5A4", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=EverydayCompact+02+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=EverydayCompact+02+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=EverydayCompact+02+3"] },
+            { id: "p122-s3", name: "03 Vanilla", color: "#DFB38C", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=EverydayCompact+03+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=EverydayCompact+03+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=EverydayCompact+03+3"] },
+            { id: "p122-s4", name: "04 Honey", color: "#CFA07A", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=EverydayCompact+04+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=EverydayCompact+04+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=EverydayCompact+04+3"] },
+            { id: "p122-s5", name: "05 Almond", color: "#C28E5C", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=EverydayCompact+05+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=EverydayCompact+05+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=EverydayCompact+05+3"] },
+            { id: "p122-s6", name: "06 Hazel", color: "#B37D53", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=EverydayCompact+06+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=EverydayCompact+06+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=EverydayCompact+06+3"] }
+        ]
+    },
+    { 
+        id: 123, name: "Swiss Beauty Loose Finishing Powder (8 g)", price: 439, oldPrice: 549, 
+        desc: "Superfine loose finishing powder that blurs pores, absorbs oil, and sets makeup.",
+        shades: [
+            { id: "p123-s1", name: "01 Natural", color: "#F4D5B6", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=LooseFinish+01+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=LooseFinish+01+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=LooseFinish+01+3"] },
+            { id: "p123-s2", name: "02 Banana Powder", color: "#FDE68A", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=LooseFinish+02+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=LooseFinish+02+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=LooseFinish+02+3"] },
+            { id: "p123-s3", name: "03 Medium", color: "#E2BA95", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=LooseFinish+03+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=LooseFinish+03+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=LooseFinish+03+3"] },
+            { id: "p123-s4", name: "06 Transparent", color: "#FFFFFF", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=LooseFinish+06+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=LooseFinish+06+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=LooseFinish+06+3"] }
+        ]
+    },
+    { 
+        id: 124, name: "Swiss Beauty All Day Face Palette (11.2 g)", price: 299, oldPrice: 399, 
+        desc: "4-pan professional face palette to brighten, sculpt, and flush with seamless blendability.",
+        shades: [
+            { id: "p124-s1", name: "01 All-Day Flush Blush Palette", color: "#F472B6", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=AllDay+Blush+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=AllDay+Blush+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=AllDay+Blush+3"] },
+            { id: "p124-s2", name: "02 All-Day Sculpt Contour Palette", color: "#B8845B", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=AllDay+Contour+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=AllDay+Contour+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=AllDay+Contour+3"] },
+            { id: "p124-s3", name: "03 All-Day Glow Highlighter Palette", color: "#FDE68A", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=AllDay+Glow+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=AllDay+Glow+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=AllDay+Glow+3"] }
+        ]
+    },
+    { 
+        id: 125, name: "Swiss Beauty Baked Blusher and Highlighter (7 g)", price: 399, oldPrice: 499, 
+        desc: "Luminous baked blusher and highlighter with transparent pigments for a natural shimmer.",
+        shades: [
+            { id: "p125-s1", name: "Shade 01", color: "#F472B6", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=BakedBlush+01+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=BakedBlush+01+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=BakedBlush+01+3"] },
+            { id: "p125-s2", name: "Shade 02", color: "#FB7185", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=BakedBlush+02+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=BakedBlush+02+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=BakedBlush+02+3"] },
+            { id: "p125-s3", name: "Shade 03", color: "#F97316", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=BakedBlush+03+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=BakedBlush+03+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=BakedBlush+03+3"] }
+        ]
+    },
+    { 
+        id: 126, name: "Swiss Beauty Bake Me Up Blush & Highlighter Duo (12 g)", price: 299, oldPrice: 375, 
+        desc: "2-in-1 silky blush and radiant highlighter duo for a sculpted, luminous finish.",
+        shades: [
+            { id: "p126-s1", name: "01", color: "#F472B6", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=BakeMeUp+01+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=BakeMeUp+01+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=BakeMeUp+01+3"] },
+            { id: "p126-s2", name: "02", color: "#FB923C", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=BakeMeUp+02+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=BakeMeUp+02+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=BakeMeUp+02+3"] },
+            { id: "p126-s3", name: "03", color: "#E11D48", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=BakeMeUp+03+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=BakeMeUp+03+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=BakeMeUp+03+3"] }
+        ]
+    },
+    { 
+        id: 127, name: "Swiss Beauty Cheek-A-Boo Contour Blusher Highlighter Palette (8 g)", price: 349, oldPrice: 449, 
+        desc: "3-in-1 pressed powder face palette with contour, blusher, and highlighter.",
+        shades: [
+            { id: "p127-s1", name: "01 Face It Up Fair", color: "#F472B6", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=CheekABoo+Fair+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=CheekABoo+Fair+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=CheekABoo+Fair+3"] },
+            { id: "p127-s2", name: "02 Face It Up Medium", color: "#FB7185", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=CheekABoo+Medium+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=CheekABoo+Medium+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=CheekABoo+Medium+3"] },
+            { id: "p127-s3", name: "03 Face It Up Dark", color: "#B8845B", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=CheekABoo+Dark+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=CheekABoo+Dark+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=CheekABoo+Dark+3"] }
+        ]
+    },
+    { 
+        id: 128, name: "Swiss Beauty Dew It Up Liquid Blush (4 ml)", price: 369, oldPrice: 449, 
+        desc: "Radiant, dewy liquid blush enriched with Vitamin E & C and a doe-foot applicator.",
+        shades: [
+            { id: "p128-s1", name: "01 Peach Fuzz", color: "#FB923C", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=DewItUp+01+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=DewItUp+01+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=DewItUp+01+3"] },
+            { id: "p128-s2", name: "02 Muted Pink", color: "#F472B6", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=DewItUp+02+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=DewItUp+02+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=DewItUp+02+3"] },
+            { id: "p128-s3", name: "03 Dusty Pink", color: "#DB2777", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=DewItUp+03+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=DewItUp+03+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=DewItUp+03+3"] },
+            { id: "p128-s4", name: "04 Blush Pink", color: "#E11D48", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=DewItUp+04+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=DewItUp+04+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=DewItUp+04+3"] }
+        ]
+    },
+    { 
+        id: 129, name: "Swiss Beauty Ultra Blush Palette (16 g)", price: 599, oldPrice: 699, 
+        desc: "8-shade studio-like glow blush, contour, and highlighter powder palette.",
+        shades: [
+            { id: "p129-s1", name: "Palette 01", color: "#F472B6", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=UltraBlush+01+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=UltraBlush+01+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=UltraBlush+01+3"] },
+            { id: "p129-s2", name: "Palette 02", color: "#FB7185", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=UltraBlush+02+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=UltraBlush+02+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=UltraBlush+02+3"] },
+            { id: "p129-s3", name: "Palette 03", color: "#E11D48", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=UltraBlush+03+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=UltraBlush+03+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=UltraBlush+03+3"] },
+            { id: "p129-s4", name: "Palette 05 (Highlighter)", color: "#FDE68A", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=UltraBlush+05+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=UltraBlush+05+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=UltraBlush+05+3"] }
+        ]
+    },
+    { 
+        id: 130, name: "Swiss Beauty Drop & Glow Liquid Highlighter (18 ml)", price: 449, oldPrice: 549, 
+        desc: "Blendable liquid highlighter drops for cheekbones or mixing with foundation.",
+        shades: [
+            { id: "p130-s1", name: "01 Light Pink", color: "#F9A8D4", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=DropGlow+01+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=DropGlow+01+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=DropGlow+01+3"] },
+            { id: "p130-s2", name: "02 Gold", color: "#D4AF37", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=DropGlow+02+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=DropGlow+02+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=DropGlow+02+3"] },
+            { id: "p130-s3", name: "05 Coppery", color: "#B45309", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=DropGlow+05+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=DropGlow+05+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=DropGlow+05+3"] },
+            { id: "p130-s4", name: "06 Rose Gold", color: "#E28B97", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=DropGlow+06+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=DropGlow+06+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=DropGlow+06+3"] }
+        ]
+    },
+    { 
+        id: 131, name: "Swiss Beauty Roll 'n' Glow Glitter Oil (13.5 ml)", price: 299, oldPrice: 375, 
+        desc: "Shimmering body and face oil infused with nourishing Jojoba and Argan oils.",
+        shades: [
+            { id: "p131-s1", name: "01 Roll 'n' Rose", color: "#F472B6", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=RollGlow+Rose+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=RollGlow+Rose+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=RollGlow+Rose+3"] },
+            { id: "p131-s2", name: "02 Roll 'n' Gold", color: "#D4AF37", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=RollGlow+Gold+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=RollGlow+Gold+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=RollGlow+Gold+3"] }
+        ]
+    },
+    { 
+        id: 132, name: "Swiss Beauty Cheek It Up Blush Stick (8 g)", price: 399, oldPrice: 499, 
+        desc: "Retractable ultra-creamy blush stick enriched with nourishing Jojoba.",
+        shades: [
+            { id: "p132-s1", name: "01 High In Pink", color: "#F472B6", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=CheekItUp+01+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=CheekItUp+01+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=CheekItUp+01+3"] },
+            { id: "p132-s2", name: "02 Showstopper", color: "#E11D48", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=CheekItUp+02+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=CheekItUp+02+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=CheekItUp+02+3"] },
+            { id: "p132-s3", name: "03 Coral", color: "#FB923C", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=CheekItUp+03+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=CheekItUp+03+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=CheekItUp+03+3"] }
+        ]
+    },
+    { 
+        id: 133, name: "Swiss Beauty Contour It Up Stick (8 g)", price: 399, oldPrice: 499, 
+        desc: "Creamy matte contour stick with Hyaluronic Acid and Vitamin E to sculpt facial features.",
+        shades: [
+            { id: "p133-s1", name: "01 Walnut Brown", color: "#78350F", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=ContourStick+01+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=ContourStick+01+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=ContourStick+01+3"] }
+        ]
+    },
+    { 
+        id: 134, name: "Swiss Beauty Softy Blush (7 g)", price: 349, oldPrice: 429, 
+        desc: "Buttery, highly pigmented blush that melts seamlessly for a natural flush.",
+        shades: [
+            { id: "p134-s1", name: "01 Strawberry", color: "#F43F5E", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=SoftyBlush+01+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=SoftyBlush+01+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=SoftyBlush+01+3"] },
+            { id: "p134-s2", name: "02 Raspberry", color: "#F472B6", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=SoftyBlush+02+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=SoftyBlush+02+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=SoftyBlush+02+3"] },
+            { id: "p134-s3", name: "03 Peach", color: "#FB923C", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=SoftyBlush+03+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=SoftyBlush+03+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=SoftyBlush+03+3"] }
+        ]
+    },
+    { 
+        id: 135, name: "Swiss Beauty Softy Highlighter (7 g)", price: 349, oldPrice: 429, 
+        desc: "Buttery-soft highlighter delivering a dewy, lit-from-within sheen without chalkiness.",
+        shades: [
+            { id: "p135-s1", name: "Shade 01", color: "#FDE68A", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=SoftyHighlighter+01+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=SoftyHighlighter+01+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=SoftyHighlighter+01+3"] },
+            { id: "p135-s2", name: "Shade 02", color: "#F59E0B", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=SoftyHighlighter+02+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=SoftyHighlighter+02+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=SoftyHighlighter+02+3"] }
+        ]
+    },
+    { 
+        id: 136, name: "Swiss Beauty Softy Contour (7 g)", price: 349, oldPrice: 429, 
+        desc: "Silky, buttery contour pan that sculpts and defines without harsh lines.",
+        shades: [
+            { id: "p136-s1", name: "Shade 01", color: "#8B5A2B", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=SoftyContour+01+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=SoftyContour+01+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=SoftyContour+01+3"] }
+        ]
+    },
+    { 
+        id: 137, name: "Swiss Beauty Matte Makeup Fixer (70 ml)", price: 289, oldPrice: 349, 
+        desc: "16-hour stay waterproof matte makeup setting spray formulated with Vitamin E.",
+        shades: [{ id: "p137-s1", name: "Standard", color: "#1F2937", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=Matte+Makeup+Fixer+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=Matte+Makeup+Fixer+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=Matte+Makeup+Fixer+3"] }]
+    },
+    { 
+        id: 138, name: "Swiss Beauty Round The Clock Makeup Setting Spray (100 ml)", price: 329, oldPrice: 399, 
+        desc: "Hydrating makeup setting spray enriched with Vitamin E, Glycerin, and Hyaluronic Acid.",
+        shades: [{ id: "p138-s1", name: "Standard", color: "#C084FC", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=RoundTheClock+Spray+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=RoundTheClock+Spray+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=RoundTheClock+Spray+3"] }]
+    },
+    { 
+        id: 139, name: "Swiss Beauty Daily Essentials Cleansing Wipes (25 Pcs)", price: 89, oldPrice: 120, 
+        desc: "Ultra-soft makeup remover wipes with Calendula and Green Tea to cleanse waterproof makeup.",
+        shades: [
+            { id: "p139-s1", name: "01 Aloevera", color: "#10B981", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=SB+Wipes+Aloe+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=SB+Wipes+Aloe+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=SB+Wipes+Aloe+3"] },
+            { id: "p139-s2", name: "02 Apple & Honey", color: "#EF4444", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=SB+Wipes+Apple+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=SB+Wipes+Apple+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=SB+Wipes+Apple+3"] },
+            { id: "p139-s3", name: "03 Natural Chamomile", color: "#FACC15", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=SB+Wipes+Chamomile+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=SB+Wipes+Chamomile+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=SB+Wipes+Chamomile+3"] },
+            { id: "p139-s4", name: "04 Natural Lotus", color: "#F472B6", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=SB+Wipes+Lotus+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=SB+Wipes+Lotus+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=SB+Wipes+Lotus+3"] }
+        ]
+    },
+    { 
+        id: 140, name: "Swiss Beauty Clean & Glow Makeup Remover Wipes (30 Pcs)", price: 129, oldPrice: 169, 
+        desc: "Soothing face wipes with Calendula extracts for sensitive skin and waterproof makeup removal.",
+        shades: [{ id: "p140-s1", name: "Standard", color: "#99F6E4", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=CleanGlow+Wipes+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=CleanGlow+Wipes+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=CleanGlow+Wipes+3"] }]
+    },
+    { 
+        id: 141, name: "Swiss Beauty Bi-Phased Micellar Water (100 ml)", price: 199, oldPrice: 249, 
+        desc: "Dual-layer oil and water micellar cleanser with Aloe Vera, Vitamin E, and Witch Hazel.",
+        shades: [{ id: "p141-s1", name: "Standard", color: "#38BDF8", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=Micellar+Water+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=Micellar+Water+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=Micellar+Water+3"] }]
+    },
+    { 
+        id: 142, name: "Swiss Beauty CRAZE Blush pH-lease (4.5 g)", price: 269, oldPrice: 329, 
+        desc: "Viral pH-adjusting multifunctional blush with Macadamia & Olive Oil for lips, cheeks, and eyelids.",
+        shades: [{ id: "p142-s1", name: "pH-Adjusting", color: "#F472B6", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=Craze+Blush+pH+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=Craze+Blush+pH+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=Craze+Blush+pH+3"] }]
+    },
+    { 
+        id: 143, name: "Swiss Beauty Glitter Colour Change Gel Lipstick (3.2 g)", price: 229, oldPrice: 299, 
+        desc: "Moisturising glitter gel lipstick that changes colour and gives a soft satin shine.",
+        shades: [
+            { id: "p143-s1", name: "Shade 01", color: "#F472B6", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=GlitterGel+Lip+01+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=GlitterGel+Lip+01+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=GlitterGel+Lip+01+3"] },
+            { id: "p143-s2", name: "Shade 02", color: "#FB7185", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=GlitterGel+Lip+02+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=GlitterGel+Lip+02+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=GlitterGel+Lip+02+3"] }
+        ]
+    },
+    { 
+        id: 144, name: "Swiss Beauty Color Changing Lip Balm (3.6 g)", price: 229, oldPrice: 279, 
+        desc: "Nourishing colour-changing lip balm enriched with Shea Butter and Vitamin E.",
+        shades: [{ id: "p144-s1", name: "Natural Tint", color: "#F9A8D4", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=ColorChange+Balm+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=ColorChange+Balm+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=ColorChange+Balm+3"] }]
+    },
+    { 
+        id: 145, name: "Swiss Beauty Kiss Kandy Lip Balm (10 ml)", price: 119, oldPrice: 149, 
+        desc: "High-shine tinted lip balm tube enriched with Olive Oil and Vitamin E.",
+        shades: [
+            { id: "p145-s1", name: "Pomegranate", color: "#E11D48", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=KissKandy+Pom+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=KissKandy+Pom+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=KissKandy+Pom+3"] },
+            { id: "p145-s2", name: "Peach", color: "#FB923C", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=KissKandy+Peach+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=KissKandy+Peach+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=KissKandy+Peach+3"] },
+            { id: "p145-s3", name: "Strawberry", color: "#F43F5E", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=KissKandy+Berry+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=KissKandy+Berry+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=KissKandy+Berry+3"] }
+        ]
+    },
+    { 
+        id: 146, name: "Swiss Beauty Colour Me Lip Balm SPF 15 (4.5 g)", price: 129, oldPrice: 169, 
+        desc: "Hydrating vegan lip balm stick with Shea Butter, Vitamin E, and SPF 15 protection.",
+        shades: [
+            { id: "p146-s1", name: "01 Strawberry Crush", color: "#F472B6", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=ColourMe+01+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=ColourMe+01+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=ColourMe+01+3"] },
+            { id: "p146-s2", name: "02 Caramel Bean", color: "#D97706", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=ColourMe+02+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=ColourMe+02+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=ColourMe+02+3"] },
+            { id: "p146-s3", name: "03 Apple Blush", color: "#EF4444", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=ColourMe+03+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=ColourMe+03+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=ColourMe+03+3"] },
+            { id: "p146-s4", name: "04 Cherry Pop", color: "#E11D48", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=ColourMe+04+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=ColourMe+04+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=ColourMe+04+3"] },
+            { id: "p146-s5", name: "05 Vanilla Brew", color: "#F59E0B", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=ColourMe+05+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=ColourMe+05+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=ColourMe+05+3"] }
+        ]
+    },
+    { 
+        id: 147, name: "Swiss Beauty Jelly Bloom pH Lip Balm (3.6 g)", price: 269, oldPrice: 329, 
+        desc: "Flower-infused jelly pH colour-changing lip balm with Vitamin E for a natural flush.",
+        shades: [
+            { id: "p147-s1", name: "01 Pink Petal", color: "#FBCFE8", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=JellyBloom+01+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=JellyBloom+01+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=JellyBloom+01+3"] },
+            { id: "p147-s2", name: "02 Rose Bud", color: "#F9A8D4", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=JellyBloom+02+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=JellyBloom+02+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=JellyBloom+02+3"] },
+            { id: "p147-s3", name: "03 Coral Kiss", color: "#FDBA74", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=JellyBloom+03+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=JellyBloom+03+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=JellyBloom+03+3"] }
+        ]
+    },
+    { 
+        id: 148, name: "Swiss Beauty Matte Lip Liquid Lipstick (6 ml)", price: 249, oldPrice: 299, 
+        desc: "Weightless, transfer-proof and smudge-proof liquid lipstick with rich matte payoff.",
+        shades: [
+            { id: "p148-s1", name: "01 Hot Red", color: "#DC2626", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=MatteLip+01+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=MatteLip+01+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=MatteLip+01+3"] },
+            { id: "p148-s2", name: "06 Wine Red", color: "#991B1B", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=MatteLip+06+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=MatteLip+06+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=MatteLip+06+3"] },
+            { id: "p148-s3", name: "14 Peach Rose", color: "#F472B6", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=MatteLip+14+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=MatteLip+14+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=MatteLip+14+3"] },
+            { id: "p148-s4", name: "24 Soft Nude", color: "#C88F65", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=MatteLip+24+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=MatteLip+24+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=MatteLip+24+3"] }
+        ]
+    },
+    { 
+        id: 149, name: "Swiss Beauty Hold Me Matte 12-Hour Liquid Lipstick (4.5 ml / 1.5 ml)", price: 349, oldPrice: 429, 
+        desc: "12-hour stay waterproof, non-drying matte liquid lipstick with Vitamin E and Apricot Oil.",
+        shades: [
+            { id: "p149-s1", name: "01 Cute Nude", color: "#D29B72", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=HoldMeMatte+01+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=HoldMeMatte+01+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=HoldMeMatte+01+3"] },
+            { id: "p149-s2", name: "03 Spicy Nude", color: "#B87B50", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=HoldMeMatte+03+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=HoldMeMatte+03+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=HoldMeMatte+03+3"] },
+            { id: "p149-s3", name: "17 Obsessive Pink", color: "#DB2777", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=HoldMeMatte+17+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=HoldMeMatte+17+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=HoldMeMatte+17+3"] },
+            { id: "p149-s4", name: "22 Romance Red", color: "#DC2626", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=HoldMeMatte+22+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=HoldMeMatte+22+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=HoldMeMatte+22+3"] }
+        ]
+    },
+    { 
+        id: 150, name: "Swiss Beauty Stay All Day 24-Hour Liquid Lipstick (2 g)", price: 329, oldPrice: 399, 
+        desc: "24-hour stay non-transfer matte liquid lipstick enriched with Vitamin E, Shea Butter, and Coconut Oil.",
+        shades: [
+            { id: "p150-s1", name: "01", color: "#D29B72", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=StayAllDay+Liq+01+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=StayAllDay+Liq+01+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=StayAllDay+Liq+01+3"] },
+            { id: "p150-s2", name: "05 Chic", color: "#C96A75", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=StayAllDay+Liq+05+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=StayAllDay+Liq+05+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=StayAllDay+Liq+05+3"] },
+            { id: "p150-s3", name: "18 Rich Berry", color: "#881337", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=StayAllDay+Liq+18+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=StayAllDay+Liq+18+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=StayAllDay+Liq+18+3"] }
+        ]
+    },
+    { 
+        id: 151, name: "Swiss Beauty Mudpie Moussy Matte Lipstick (3 g)", price: 299, oldPrice: 375, 
+        desc: "Whipped mousse-to-velvet matte lipstick infused with Hyaluronic Acid to blur lip lines.",
+        shades: [
+            { id: "p151-s1", name: "01 CEO Chic", color: "#B87B50", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=Mudpie+01+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=Mudpie+01+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=Mudpie+01+3"] },
+            { id: "p151-s2", name: "05 Pretty Hustler", color: "#C96A75", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=Mudpie+05+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=Mudpie+05+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=Mudpie+05+3"] },
+            { id: "p151-s3", name: "10 Lady Luxe", color: "#9E4752", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=Mudpie+10+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=Mudpie+10+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=Mudpie+10+3"] }
+        ]
+    },
+    { 
+        id: 152, name: "Swiss Beauty Matte Hour 10-Hour Liquid Lipstick (4.2 ml)", price: 249, oldPrice: 299, 
+        desc: "Feather-light 10-hour stay waterproof liquid lipstick with Olive, Jojoba, and Almond Oils.",
+        shades: [
+            { id: "p152-s1", name: "01 Mimosa Glow", color: "#C96A75", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=MatteHour+01+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=MatteHour+01+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=MatteHour+01+3"] },
+            { id: "p152-s2", name: "02 Rose All Day", color: "#DB2777", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=MatteHour+02+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=MatteHour+02+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=MatteHour+02+3"] },
+            { id: "p152-s3", name: "10 Espresso Martini", color: "#78350F", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=MatteHour+10+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=MatteHour+10+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=MatteHour+10+3"] }
+        ]
+    },
+    { 
+        id: 153, name: "Swiss Beauty Lip Stain Matte Lipstick Crayon (3.4 g)", price: 299, oldPrice: 349, 
+        desc: "2-in-1 lip liner and lip filler matte crayon with intense pigmentation.",
+        shades: [
+            { id: "p153-s1", name: "201 Russian Red", color: "#DC2626", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=LipStain+201+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=LipStain+201+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=LipStain+201+3"] },
+            { id: "p153-s2", name: "202 Peaches N Cream", color: "#F4978E", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=LipStain+202+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=LipStain+202+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=LipStain+202+3"] },
+            { id: "p153-s3", name: "225 Cafe Mocha", color: "#78350F", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=LipStain+225+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=LipStain+225+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=LipStain+225+3"] }
+        ]
+    },
+    { 
+        id: 154, name: "Swiss Beauty Stay Maxx Lip Crayon with Sharpener (3.5 g)", price: 299, oldPrice: 375, 
+        desc: "12-hour stay ultra-matte waterproof lip crayon enriched with Beeswax (includes free sharpener).",
+        shades: [
+            { id: "p154-s1", name: "01 Orange Red", color: "#EA580C", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=StayMaxx+01+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=StayMaxx+01+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=StayMaxx+01+3"] },
+            { id: "p154-s2", name: "19 Artist Nude", color: "#B87B50", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=StayMaxx+19+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=StayMaxx+19+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=StayMaxx+19+3"] },
+            { id: "p154-s3", name: "22 Coffee", color: "#78350F", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=StayMaxx+22+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=StayMaxx+22+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=StayMaxx+22+3"] }
+        ]
+    },
+    { 
+        id: 155, name: "Swiss Beauty Matte Cat Retractable Lip Crayon (1.5 g)", price: 299, oldPrice: 349, 
+        desc: "8-hour stay retractable waterproof lip crayon with Vitamin E and Jojoba Oil.",
+        shades: [
+            { id: "p155-s1", name: "01", color: "#C96A75", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=MatteCat+01+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=MatteCat+01+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=MatteCat+01+3"] },
+            { id: "p155-s2", name: "11 Wild Rose", color: "#DB2777", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=MatteCat+11+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=MatteCat+11+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=MatteCat+11+3"] },
+            { id: "p155-s3", name: "18 Wine Red", color: "#991B1B", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=MatteCat+18+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=MatteCat+18+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=MatteCat+18+3"] }
+        ]
+    },
+    { 
+        id: 156, name: "Swiss Beauty Non-Transfer Waterproof Lipstick (3 g)", price: 399, oldPrice: 499, 
+        desc: "One-stroke plush soft matte lipstick with zero transfer and waterproof stay.",
+        shades: [
+            { id: "p156-s1", name: "401", color: "#DC2626", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=NonTransfer+WP+401+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=NonTransfer+WP+401+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=NonTransfer+WP+401+3"] },
+            { id: "p156-s2", name: "409 Cute Nude", color: "#C88F65", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=NonTransfer+WP+409+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=NonTransfer+WP+409+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=NonTransfer+WP+409+3"] }
+        ]
+    },
+    { 
+        id: 157, name: "Swiss Beauty Non-Transfer Matte Lipstick (2 g)", price: 329, oldPrice: 399, 
+        desc: "Velvety, pigment-rich waterproof matte lipstick enriched with Vitamin E.",
+        shades: [
+            { id: "p157-s1", name: "01", color: "#991B1B", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=NonTransfer+Matte+01+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=NonTransfer+Matte+01+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=NonTransfer+Matte+01+3"] },
+            { id: "p157-s2", name: "09 Cute Nude", color: "#C88F65", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=NonTransfer+Matte+09+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=NonTransfer+Matte+09+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=NonTransfer+Matte+09+3"] },
+            { id: "p157-s3", name: "18 Coffee", color: "#78350F", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=NonTransfer+Matte+18+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=NonTransfer+Matte+18+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=NonTransfer+Matte+18+3"] }
+        ]
+    },
+    { 
+        id: 158, name: "Swiss Beauty Pure Matte Lipstick (3.8 g)", price: 229, oldPrice: 299, 
+        desc: "Best-selling creamy matte bullet lipstick with intense single-swipe colour payoff.",
+        shades: [
+            { id: "p158-s1", name: "201 Russian Red", color: "#DC2626", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=PureMatte+201+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=PureMatte+201+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=PureMatte+201+3"] },
+            { id: "p158-s2", name: "203 Hazelnut", color: "#A86B4C", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=PureMatte+203+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=PureMatte+203+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=PureMatte+203+3"] },
+            { id: "p158-s3", name: "222 Hot Nude", color: "#C88F65", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=PureMatte+222+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=PureMatte+222+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=PureMatte+222+3"] },
+            { id: "p158-s4", name: "229 Brandy Harrington", color: "#7F1D1D", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=PureMatte+229+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=PureMatte+229+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=PureMatte+229+3"] }
+        ]
+    },
+    { 
+        id: 159, name: "Swiss Beauty HD Matte Lipstick (3.5 g)", price: 399, oldPrice: 499, 
+        desc: "High-definition hydrating bullet matte lipstick for a contoured, fuller pout.",
+        shades: [
+            { id: "p159-s1", name: "01", color: "#991B1B", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=HDMatte+01+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=HDMatte+01+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=HDMatte+01+3"] },
+            { id: "p159-s2", name: "09 Cute Nude", color: "#C88F65", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=HDMatte+09+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=HDMatte+09+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=HDMatte+09+3"] },
+            { id: "p159-s3", name: "22 Brandy Harrington", color: "#7F1D1D", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=HDMatte+22+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=HDMatte+22+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=HDMatte+22+3"] }
+        ]
+    },
+    { 
+        id: 160, name: "Swiss Beauty Gloss Me Clear Lip Gloss (6.7 ml)", price: 249, oldPrice: 299, 
+        desc: "Non-sticky, lightweight clear lip gloss for a mirror-like glass shine.",
+        shades: [{ id: "p160-s1", name: "Clear Glass", color: "#FFFFFF", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=GlossMe+Clear+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=GlossMe+Clear+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=GlossMe+Clear+3"] }]
+    },
+    { 
+        id: 161, name: "Swiss Beauty Shine & Plump Lip Gloss (4 ml)", price: 229, oldPrice: 299, 
+        desc: "Non-sticky multidimensional shine lip gloss for fuller, smooth, hydrated lips.",
+        shades: [
+            { id: "p161-s1", name: "Shade 01", color: "#F472B6", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=ShinePlump+01+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=ShinePlump+01+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=ShinePlump+01+3"] },
+            { id: "p161-s2", name: "Shade 04", color: "#E28B97", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=ShinePlump+04+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=ShinePlump+04+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=ShinePlump+04+3"] }
+        ]
+    },
+    { 
+        id: 162, name: "Swiss Beauty Plump-Up Wetgloss (2 ml)", price: 279, oldPrice: 349, 
+        desc: "Cushiony plumping wet lip gloss that gives glass-like glossy lips.",
+        shades: [
+            { id: "p162-s1", name: "Shade 01", color: "#F9A8D4", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=PlumpUp+01+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=PlumpUp+01+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=PlumpUp+01+3"] },
+            { id: "p162-s2", name: "Shade 05", color: "#E28B97", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=PlumpUp+05+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=PlumpUp+05+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=PlumpUp+05+3"] }
+        ]
+    },
+    { 
+        id: 163, name: "Swiss Beauty Dip Tint pH Lip Oil (3 ml)", price: 299, oldPrice: 375, 
+        desc: "Colour-changing pH lip oil enriched with Vitamin E to repair chapped lips.",
+        shades: [
+            { id: "p163-s1", name: "01 Strawberry", color: "#F43F5E", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=DipTint+Strawberry+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=DipTint+Strawberry+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=DipTint+Strawberry+3"] },
+            { id: "p163-s2", name: "02 Dragon Fruit", color: "#EC4899", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=DipTint+DragonFruit+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=DipTint+DragonFruit+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=DipTint+DragonFruit+3"] },
+            { id: "p163-s3", name: "03 Peach", color: "#FB923C", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=DipTint+Peach+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=DipTint+Peach+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=DipTint+Peach+3"] },
+            { id: "p163-s4", name: "04 Kiwi", color: "#10B981", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=DipTint+Kiwi+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=DipTint+Kiwi+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=DipTint+Kiwi+3"] }
+        ]
+    },
+    { 
+        id: 164, name: "Swiss Beauty Glaze Days Lip Tint (4.2 g)", price: 249, oldPrice: 299, 
+        desc: "Hydrating glossy lip tint enriched with Vitamin E, Shea Butter, and Camellia Seed Oil.",
+        shades: [
+            { id: "p164-s1", name: "01 Caramel Drop", color: "#B87B50", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=GlazeDays+01+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=GlazeDays+01+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=GlazeDays+01+3"] },
+            { id: "p164-s2", name: "02 Magenta Rush", color: "#DB2777", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=GlazeDays+02+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=GlazeDays+02+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=GlazeDays+02+3"] },
+            { id: "p164-s3", name: "04 Cherry Pop", color: "#E11D48", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=GlazeDays+04+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=GlazeDays+04+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=GlazeDays+04+3"] }
+        ]
+    },
+    { 
+        id: 165, name: "Swiss Beauty Moist Heist Colour-Changing Lip Oil (4.8 g)", price: 199, oldPrice: 249, 
+        desc: "Non-sticky colour-changing lip oil with Vitamin E and cooling Mint Oil.",
+        shades: [
+            { id: "p165-s1", name: "01 Berry Robbery", color: "#E11D48", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=MoistHeist+Oil+01+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=MoistHeist+Oil+01+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=MoistHeist+Oil+01+3"] },
+            { id: "p165-s2", name: "02 Cucumber Trap", color: "#10B981", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=MoistHeist+Oil+02+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=MoistHeist+Oil+02+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=MoistHeist+Oil+02+3"] },
+            { id: "p165-s3", name: "03 Melon Loot", color: "#FB923C", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=MoistHeist+Oil+03+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=MoistHeist+Oil+03+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=MoistHeist+Oil+03+3"] }
+        ]
+    },
+    { 
+        id: 166, name: "Swiss Beauty Moist Heist Tinted Lip Gloss (4.8 g)", price: 199, oldPrice: 249, 
+        desc: "Juicy, glassy-finish tinted lip gloss infused with nourishing Vitamin E.",
+        shades: [
+            { id: "p166-s1", name: "01 Nude Code", color: "#C88F65", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=MoistHeist+Gloss+01+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=MoistHeist+Gloss+01+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=MoistHeist+Gloss+01+3"] },
+            { id: "p166-s2", name: "02 Pink Plan", color: "#F472B6", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=MoistHeist+Gloss+02+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=MoistHeist+Gloss+02+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=MoistHeist+Gloss+02+3"] },
+            { id: "p166-s3", name: "03 Berry Mission", color: "#9E4752", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=MoistHeist+Gloss+03+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=MoistHeist+Gloss+03+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=MoistHeist+Gloss+03+3"] }
+        ]
+    },
+    { 
+        id: 167, name: "Swiss Beauty Moist Heist Shimmer Lip Oil (4.8 g)", price: 199, oldPrice: 249, 
+        desc: "Non-sticky mirror-like shimmer lip oil for instant moisture and high gloss.",
+        shades: [
+            { id: "p167-s1", name: "01 Nude Flash", color: "#D29B72", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=ShimmerLipOil+01+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=ShimmerLipOil+01+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=ShimmerLipOil+01+3"] },
+            { id: "p167-s2", name: "02 Pink Flicker", color: "#F472B6", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=ShimmerLipOil+02+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=ShimmerLipOil+02+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=ShimmerLipOil+02+3"] },
+            { id: "p167-s3", name: "03 Orange Alert", color: "#FB923C", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=ShimmerLipOil+03+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=ShimmerLipOil+03+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=ShimmerLipOil+03+3"] }
+        ]
+    },
+    { 
+        id: 168, name: "Swiss Beauty Satin Comfort Lipstick (3 g)", price: 249, oldPrice: 299, 
+        desc: "Weightless satin-to-matte lipstick with smooth glide and rich single-swipe colour.",
+        shades: [
+            { id: "p168-s1", name: "01 Barely Nude", color: "#D29B72", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=SatinComfort+01+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=SatinComfort+01+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=SatinComfort+01+3"] },
+            { id: "p168-s2", name: "06 English Rose", color: "#C96A75", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=SatinComfort+06+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=SatinComfort+06+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=SatinComfort+06+3"] },
+            { id: "p168-s3", name: "18 Rouge Red", color: "#DC2626", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=SatinComfort+18+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=SatinComfort+18+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=SatinComfort+18+3"] }
+        ]
+    },
+    { 
+        id: 169, name: "Swiss Beauty Stay All Day Bullet Lipstick (4 g)", price: 299, oldPrice: 375, 
+        desc: "12-hour stay transfer-proof matte lipstick with Vitamin E and Shea Butter.",
+        shades: [
+            { id: "p169-s1", name: "01 Pouty", color: "#C96A75", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=StayAllDay+01+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=StayAllDay+01+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=StayAllDay+01+3"] },
+            { id: "p169-s2", name: "05 Bossy", color: "#9E4752", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=StayAllDay+05+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=StayAllDay+05+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=StayAllDay+05+3"] },
+            { id: "p169-s3", name: "07 Sassy", color: "#DC2626", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=StayAllDay+07+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=StayAllDay+07+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=StayAllDay+07+3"] }
+        ]
+    },
+    { 
+        id: 170, name: "Swiss Beauty Pure Lustre Lipstick (3.8 g)", price: 349, oldPrice: 429, 
+        desc: "Luxurious shine lipstick infused with Olive Oil and Vitamin E for intense hydration.",
+        shades: [
+            { id: "p170-s1", name: "01 True Nude", color: "#D29B72", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=PureLustre+01+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=PureLustre+01+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=PureLustre+01+3"] },
+            { id: "p170-s2", name: "02 My Rose", color: "#E28B97", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=PureLustre+02+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=PureLustre+02+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=PureLustre+02+3"] },
+            { id: "p170-s3", name: "12 Mad Maroon", color: "#7F1D1D", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=PureLustre+12+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=PureLustre+12+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=PureLustre+12+3"] }
+        ]
+    },
+    { 
+        id: 171, name: "Swiss Beauty More Than Glitter Lipstick (3 g)", price: 449, oldPrice: 549, 
+        desc: "Multi-dimensional shimmer lipstick enriched with Vitamin C for a dazzling shine.",
+        shades: [
+            { id: "p171-s1", name: "01 Sparkle Gold", color: "#D4AF37", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=MoreGlitter+01+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=MoreGlitter+01+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=MoreGlitter+01+3"] },
+            { id: "p171-s2", name: "02 Glitz Pink", color: "#F472B6", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=MoreGlitter+02+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=MoreGlitter+02+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=MoreGlitter+02+3"] },
+            { id: "p171-s3", name: "04 Glitter Rose", color: "#E11D48", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=MoreGlitter+04+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=MoreGlitter+04+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=MoreGlitter+04+3"] }
+        ]
+    },
+    { 
+        id: 172, name: "Swiss Beauty Cream N' Tint Multi-Purpose Lip & Cheek Tint (8 g)", price: 219, oldPrice: 279, 
+        desc: "Lightweight 3-in-1 tint for eyes, lips, and cheeks with Vitamin E & Jojoba Oil.",
+        shades: [
+            { id: "p172-s1", name: "01 Rose Apple", color: "#E11D48", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=CreamNTint+01+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=CreamNTint+01+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=CreamNTint+01+3"] },
+            { id: "p172-s2", name: "02", color: "#F472B6", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=CreamNTint+02+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=CreamNTint+02+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=CreamNTint+02+3"] },
+            { id: "p172-s3", name: "03", color: "#FB923C", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=CreamNTint+03+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=CreamNTint+03+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=CreamNTint+03+3"] }
+        ]
+    },
+    { 
+        id: 173, name: "Swiss Beauty All About Lip Palette (12 g)", price: 469, oldPrice: 549, 
+        desc: "Multi-tasking matte lip palette with brush that doubles as blush and eyeshadow.",
+        shades: [
+            { id: "p173-s1", name: "Palette 01", color: "#E11D48", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=AllAboutLip+01+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=AllAboutLip+01+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=AllAboutLip+01+3"] },
+            { id: "p173-s2", name: "Palette 02", color: "#C96A75", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=AllAboutLip+02+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=AllAboutLip+02+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=AllAboutLip+02+3"] },
+            { id: "p173-s3", name: "Palette 03", color: "#9E4752", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=AllAboutLip+03+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=AllAboutLip+03+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=AllAboutLip+03+3"] }
+        ]
+    },
+    { 
+        id: 174, name: "Swiss Beauty 3-in-1 Eyebrow Palette with Wax (5 g)", price: 349, oldPrice: 429, 
+        desc: "4-pan eyebrow palette with clear shaping wax, base shade, and 2 brown tones.",
+        shades: [
+            { id: "p174-s1", name: "01", color: "#5C4033", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=3in1+BrowPalette+01+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=3in1+BrowPalette+01+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=3in1+BrowPalette+01+3"] },
+            { id: "p174-s2", name: "02", color: "#3E2723", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=3in1+BrowPalette+02+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=3in1+BrowPalette+02+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=3in1+BrowPalette+02+3"] }
+        ]
+    },
+    { 
+        id: 175, name: "Swiss Beauty Dual-Sided Eyebrow Pencil with Brush (1.5 g)", price: 99, oldPrice: 129, 
+        desc: "Water-resistant eyebrow outlining and filling pencil with built-in spoolie brush.",
+        shades: [
+            { id: "p175-s1", name: "101 Dark Brown", color: "#4A2E1B", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=EyebrowPencil+101+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=EyebrowPencil+101+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=EyebrowPencil+101+3"] },
+            { id: "p175-s2", name: "104 Black", color: "#1C1C1C", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=EyebrowPencil+104+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=EyebrowPencil+104+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=EyebrowPencil+104+3"] }
+        ]
+    },
+    { 
+        id: 176, name: "Swiss Beauty Brow Definer Pencil (1.5 g)", price: 149, oldPrice: 199, 
+        desc: "Smudge-proof, water-resistant pointed brow definer for precise hairline strokes.",
+        shades: [
+            { id: "p176-s1", name: "01 Chestnut Brown", color: "#6E473B", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=BrowDefiner+01+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=BrowDefiner+01+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=BrowDefiner+01+3"] },
+            { id: "p176-s2", name: "02 Coco Brown", color: "#5C4033", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=BrowDefiner+02+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=BrowDefiner+02+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=BrowDefiner+02+3"] },
+            { id: "p176-s3", name: "03 Deep Brown", color: "#3E2723", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=BrowDefiner+03+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=BrowDefiner+03+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=BrowDefiner+03+3"] },
+            { id: "p176-s4", name: "04 Black", color: "#1C1C1C", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=BrowDefiner+04+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=BrowDefiner+04+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=BrowDefiner+04+3"] }
+        ]
+    },
+    { 
+        id: 177, name: "Swiss Beauty Browmance Micro-Tip Brow Pen (0.5 ml)", price: 299, oldPrice: 375, 
+        desc: "8-hour stay waterproof eyebrow pen enriched with Castor Oil for hair-like strokes.",
+        shades: [
+            { id: "p177-s1", name: "01 Light Brown", color: "#78513B", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=Browmance+01+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=Browmance+01+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=Browmance+01+3"] },
+            { id: "p177-s2", name: "02 Medium Brown", color: "#5C4033", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=Browmance+02+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=Browmance+02+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=Browmance+02+3"] },
+            { id: "p177-s3", name: "03 Deep Brown", color: "#3E2723", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=Browmance+03+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=Browmance+03+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=Browmance+03+3"] },
+            { id: "p177-s4", name: "04 Subtle Black", color: "#1C1C1C", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=Browmance+04+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=Browmance+04+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=Browmance+04+3"] }
+        ]
+    },
+    { 
+        id: 178, name: "Swiss Beauty Precision Retractable Eyebrow Pencil (0.35 g)", price: 179, oldPrice: 229, 
+        desc: "Retractable slant-angled tip eyebrow pencil to shape, fill, and define without sharpening.",
+        shades: [
+            { id: "p178-s1", name: "01 Smoky Brown", color: "#6E473B", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=PrecisionBrow+01+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=PrecisionBrow+01+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=PrecisionBrow+01+3"] },
+            { id: "p178-s2", name: "02 Classic Brown", color: "#5C4033", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=PrecisionBrow+02+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=PrecisionBrow+02+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=PrecisionBrow+02+3"] },
+            { id: "p178-s3", name: "03 Deep Brown", color: "#3E2723", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=PrecisionBrow+03+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=PrecisionBrow+03+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=PrecisionBrow+03+3"] },
+            { id: "p178-s4", name: "04 Charcoal Black", color: "#1C1C1C", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=PrecisionBrow+04+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=PrecisionBrow+04+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=PrecisionBrow+04+3"] }
+        ]
+    },
+    { 
+        id: 179, name: "Swiss Beauty Ultimate 9-Color Eyeshadow Palette (6 g)", price: 329, oldPrice: 399, 
+        desc: "9 expertly coordinated matte, satin, shimmer, and metallic eyeshadow shades.",
+        shades: [
+            { id: "p179-s1", name: "Palette 01", color: "#C88F65", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=UltimateEye+01+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=UltimateEye+01+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=UltimateEye+01+3"] },
+            { id: "p179-s2", name: "Palette 02", color: "#B87B50", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=UltimateEye+02+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=UltimateEye+02+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=UltimateEye+02+3"] },
+            { id: "p179-s3", name: "Palette 05", color: "#9E4752", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=UltimateEye+05+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=UltimateEye+05+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=UltimateEye+05+3"] }
+        ]
+    },
+    { 
+        id: 180, name: "Swiss Beauty Winky 36 Color Eyeshadow Palette (40 g)", price: 1199, oldPrice: 1499, 
+        desc: "36-color professional eyeshadow palette with vibrant mattes, neutrals, and sparkles.",
+        shades: [
+            { id: "p180-s1", name: "Variant 01", color: "#D4AF37", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=Winky36+01+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=Winky36+01+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=Winky36+01+3"] },
+            { id: "p180-s2", name: "Variant 02", color: "#C96A75", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=Winky36+02+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=Winky36+02+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=Winky36+02+3"] }
+        ]
+    },
+    { 
+        id: 181, name: "Swiss Beauty Lustre Eyeshadow Palette (5 g)", price: 229, oldPrice: 299, 
+        desc: "Compact eyeshadow palette with a mix of mattes, shimmers, and glitters.",
+        shades: [
+            { id: "p181-s1", name: "01 Rose N Petals", color: "#F472B6", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=LustreEye+01+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=LustreEye+01+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=LustreEye+01+3"] },
+            { id: "p181-s2", name: "02 Nude Addict", color: "#C88F65", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=LustreEye+02+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=LustreEye+02+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=LustreEye+02+3"] },
+            { id: "p181-s3", name: "03 Party All Night", color: "#6B21A8", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=LustreEye+03+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=LustreEye+03+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=LustreEye+03+3"] },
+            { id: "p181-s4", name: "04 Shimmer N Shine", color: "#D4AF37", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=LustreEye+04+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=LustreEye+04+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=LustreEye+04+3"] }
+        ]
+    },
+    { 
+        id: 182, name: "Swiss Beauty Awaken Eyeshadow Palette (11 g)", price: 349, oldPrice: 449, 
+        desc: "Velvety, high-impact matte and shimmer eyeshadow palette.",
+        shades: [
+            { id: "p182-s1", name: "01 Blooming Rose", color: "#E28B97", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=AwakenEye+01+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=AwakenEye+01+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=AwakenEye+01+3"] },
+            { id: "p182-s2", name: "02 Brewed Morning", color: "#B87B50", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=AwakenEye+02+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=AwakenEye+02+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=AwakenEye+02+3"] }
+        ]
+    },
+    { 
+        id: 183, name: "Swiss Beauty Limitless Eyeshadow Palette (30 g)", price: 499, oldPrice: 599, 
+        desc: "15-shade high-impact matte, metallic, and shimmer eyeshadow palette.",
+        shades: [
+            { id: "p183-s1", name: "01 Stargaze", color: "#9E4752", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=LimitlessEye+01+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=LimitlessEye+01+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=LimitlessEye+01+3"] }
+        ]
+    },
+    { 
+        id: 184, name: "Swiss Beauty Chrome & Matte Twin Eyeshadow (2 g)", price: 399, oldPrice: 499, 
+        desc: "24-hour stay twin eyeshadow with soft fog matte and bold chromatic shimmer.",
+        shades: [
+            { id: "p184-s1", name: "01 Night Skies", color: "#1E3A8A", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=ChromeMatte+01+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=ChromeMatte+01+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=ChromeMatte+01+3"] },
+            { id: "p184-s2", name: "02 Aqua Moon", color: "#0D9488", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=ChromeMatte+02+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=ChromeMatte+02+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=ChromeMatte+02+3"] },
+            { id: "p184-s3", name: "03 Cinnamon Crush", color: "#B45309", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=ChromeMatte+03+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=ChromeMatte+03+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=ChromeMatte+03+3"] }
+        ]
+    },
+    { 
+        id: 185, name: "Swiss Beauty Jelly Verse Glow Stick (3 g)", price: 449, oldPrice: 549, 
+        desc: "Bouncy, aqua-infused cooling jelly glow stick with micro-sparkles for eyes, lips, and cheeks.",
+        shades: [
+            { id: "p185-s1", name: "01 Star Shower", color: "#FDE68A", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=JellyVerse+01+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=JellyVerse+01+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=JellyVerse+01+3"] },
+            { id: "p185-s2", name: "02 Bronzed Eclipse", color: "#B87B50", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=JellyVerse+02+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=JellyVerse+02+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=JellyVerse+02+3"] },
+            { id: "p185-s3", name: "03 Solar Flash", color: "#F59E0B", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=JellyVerse+03+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=JellyVerse+03+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=JellyVerse+03+3"] }
+        ]
+    },
+    { 
+        id: 186, name: "Swiss Beauty Eye Define Auto Kajal (0.35 g)", price: 199, oldPrice: 249, 
+        desc: "Retractable, waterproof true-black matte gel kajal pencil.",
+        shades: [{ id: "p186-s1", name: "Black", color: "#1C1C1C", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=EyeDefine+Kajal+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=EyeDefine+Kajal+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=EyeDefine+Kajal+3"] }]
+    },
+    { 
+        id: 187, name: "Swiss Beauty You & Eye Power Black Kajal (0.30 g)", price: 189, oldPrice: 229, 
+        desc: "24-hour stay waterproof, smudge-proof black kajal infused with Vitamin E.",
+        shades: [{ id: "p187-s1", name: "Black", color: "#1C1C1C", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=YouAndEye+Kajal+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=YouAndEye+Kajal+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=YouAndEye+Kajal+3"] }]
+    },
+    { 
+        id: 188, name: "Swiss Beauty Bold & Black 36-Hour Kajal (1.2 g)", price: 349, oldPrice: 429, 
+        desc: "Intensely pigmented waterproof kajal liner that lasts up to 36 hours without flaking.",
+        shades: [{ id: "p188-s1", name: "Bold Black", color: "#1C1C1C", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=BoldBlack+Kajal+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=BoldBlack+Kajal+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=BoldBlack+Kajal+3"] }]
+    },
+    { 
+        id: 189, name: "Swiss Beauty Intense Gel Kajal (1.2 g)", price: 299, oldPrice: 375, 
+        desc: "24-hour stay waterproof and transfer-proof gel kajal available in multiple colours.",
+        shades: [
+            { id: "p189-s1", name: "01 Black", color: "#1C1C1C", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=IntenseGel+Kajal+01+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=IntenseGel+Kajal+01+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=IntenseGel+Kajal+01+3"] },
+            { id: "p189-s2", name: "03 Brown", color: "#4A2E1B", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=IntenseGel+Kajal+03+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=IntenseGel+Kajal+03+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=IntenseGel+Kajal+03+3"] },
+            { id: "p189-s3", name: "04 Blue", color: "#1D4ED8", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=IntenseGel+Kajal+04+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=IntenseGel+Kajal+04+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=IntenseGel+Kajal+04+3"] }
+        ]
+    },
+    { 
+        id: 190, name: "Swiss Beauty Quick Dry Liquid Eyeliner (4 ml)", price: 229, oldPrice: 279, 
+        desc: "Water-resistant, non-transfer shining black liquid eyeliner that dries quickly.",
+        shades: [{ id: "p190-s1", name: "Black", color: "#1C1C1C", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=QuickDry+Eyeliner+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=QuickDry+Eyeliner+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=QuickDry+Eyeliner+3"] }]
+    },
+    { 
+        id: 191, name: "Swiss Beauty Hi-Tech Super Line Liquid Eyeliner (5.5 ml)", price: 279, oldPrice: 349, 
+        desc: "Smudge-proof liquid eyeliner with a high-definition flexible felt tip applicator.",
+        shades: [{ id: "p191-s1", name: "Black", color: "#1C1C1C", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=HiTech+Eyeliner+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=HiTech+Eyeliner+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=HiTech+Eyeliner+3"] }]
+    },
+    { 
+        id: 192, name: "Swiss Beauty 2-in-1 Eyebrow & Gel Eyeliner (3g + 4g)", price: 429, oldPrice: 529, 
+        desc: "Water-resistant 2-in-1 eyebrow powder and creamy gel eyeliner pot with brush.",
+        shades: [
+            { id: "p192-s1", name: "01", color: "#1C1C1C", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=BrowGelLiner+01+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=BrowGelLiner+01+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=BrowGelLiner+01+3"] },
+            { id: "p192-s2", name: "02", color: "#3E2723", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=BrowGelLiner+02+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=BrowGelLiner+02+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=BrowGelLiner+02+3"] }
+        ]
+    },
+    { 
+        id: 193, name: "Swiss Beauty Holographic Multichrome Eyeliner (0.2 g)", price: 449, oldPrice: 549, 
+        desc: "Waterproof colour-changing multichrome eyeliner pencil for a galactic eye look.",
+        shades: [
+            { id: "p193-s1", name: "01 Milky Way", color: "#A855F7", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=HoloLiner+01+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=HoloLiner+01+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=HoloLiner+01+3"] },
+            { id: "p193-s2", name: "02 Northern Light", color: "#10B981", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=HoloLiner+02+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=HoloLiner+02+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=HoloLiner+02+3"] },
+            { id: "p193-s3", name: "04 Nebula", color: "#EC4899", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=HoloLiner+04+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=HoloLiner+04+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=HoloLiner+04+3"] }
+        ]
+    },
+    { 
+        id: 194, name: "Swiss Beauty My Matte Maxx Eyeliner (4 g)", price: 269, oldPrice: 329, 
+        desc: "Quick-drying waterproof liquid eyeliner with intense jet-black matte finish.",
+        shades: [{ id: "p194-s1", name: "Black", color: "#1C1C1C", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=MatteMaxx+Liner+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=MatteMaxx+Liner+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=MatteMaxx+Liner+3"] }]
+    },
+    { 
+        id: 195, name: "Swiss Beauty Jet Black Bold Felt Tip Eyeliner (1.2 ml)", price: 249, oldPrice: 299, 
+        desc: "Non-feathering, water-resistant felt-tip pen eyeliner in deep black.",
+        shades: [{ id: "p195-s1", name: "Black", color: "#1C1C1C", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=JetBlack+PenLiner+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=JetBlack+PenLiner+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=JetBlack+PenLiner+3"] }]
+    },
+    { 
+        id: 196, name: "Swiss Beauty Pro Eyelash Glue (5 ml)", price: 269, oldPrice: 329, 
+        desc: "24-hour long-lasting, latex-free, waterproof eyelash adhesive with applicator brush.",
+        shades: [
+            { id: "p196-s1", name: "White (Dries Clear)", color: "#FFFFFF", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=LashGlue+White+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=LashGlue+White+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=LashGlue+White+3"] },
+            { id: "p196-s2", name: "Black", color: "#1C1C1C", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=LashGlue+Black+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=LashGlue+Black+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=LashGlue+Black+3"] }
+        ]
+    },
+    { 
+        id: 197, name: "Swiss Beauty Color Splash Nail Polish (11 ml)", price: 69, oldPrice: 99, 
+        desc: "Quick-drying, chip-resistant nail polish with a round-cut brush for smooth application.",
+        shades: [
+            { id: "p197-s1", name: "Reds & Maroons (201)", color: "#DC2626", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=ColorSplash+Red+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=ColorSplash+Red+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=ColorSplash+Red+3"] },
+            { id: "p197-s2", name: "Pinks & Wines (301)", color: "#EC4899", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=ColorSplash+Pink+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=ColorSplash+Pink+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=ColorSplash+Pink+3"] },
+            { id: "p197-s3", name: "Nudes & Browns (401)", color: "#C88F65", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=ColorSplash+Nude+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=ColorSplash+Nude+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=ColorSplash+Nude+3"] },
+            { id: "p197-s4", name: "Metallics (601)", color: "#D4AF37", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=ColorSplash+Metallic+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=ColorSplash+Metallic+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=ColorSplash+Metallic+3"] }
+        ]
+    },
+    { 
+        id: 198, name: "Swiss Beauty Slay Nail Color (13 ml)", price: 129, oldPrice: 169, 
+        desc: "Ultra-shine, no-chip, no-fade nail enamel with unbeatable colour payoff.",
+        shades: [
+            { id: "p198-s1", name: "Reds & Maroons (201)", color: "#991B1B", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=SlayNail+Red+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=SlayNail+Red+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=SlayNail+Red+3"] },
+            { id: "p198-s2", name: "Pinks & Wines (301)", color: "#DB2777", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=SlayNail+Pink+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=SlayNail+Pink+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=SlayNail+Pink+3"] },
+            { id: "p198-s3", name: "Nudes & Browns (401)", color: "#B87B50", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=SlayNail+Nude+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=SlayNail+Nude+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=SlayNail+Nude+3"] },
+            { id: "p198-s4", name: "Shimmers & Glitters (701)", color: "#FDE68A", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=SlayNail+Glitter+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=SlayNail+Glitter+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=SlayNail+Glitter+3"] }
+        ]
+    },
+    { 
+        id: 199, name: "Swiss Beauty Professional UV Gel Nail Polish (15 ml)", price: 249, oldPrice: 299, 
+        desc: "High-gloss chip-resistant UV/LED gel nail polish, including Top Coat, Base Coat, and Matte Top Coat.",
+        shades: [
+            { id: "p199-s1", name: "Shade 01", color: "#F472B6", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=UVGel+01+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=UVGel+01+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=UVGel+01+3"] },
+            { id: "p199-s2", name: "Top Coat-A", color: "#FFFFFF", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=UVGel+TopCoat+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=UVGel+TopCoat+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=UVGel+TopCoat+3"] },
+            { id: "p199-s3", name: "Base Coat-B", color: "#F3F4F6", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=UVGel+BaseCoat+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=UVGel+BaseCoat+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=UVGel+BaseCoat+3"] }
+        ]
+    },
+    { 
+        id: 200, name: "Swiss Beauty Instant Dip & Twist Nail Polish Remover (80 ml)", price: 149, oldPrice: 199, 
+        desc: "Acetone and toluene-free dip & twist foam nail paint remover with Olive Oil and Vitamin E.",
+        shades: [
+            { id: "p200-s1", name: "01 Peach", color: "#FB923C", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=DipTwist+Peach+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=DipTwist+Peach+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=DipTwist+Peach+3"] },
+            { id: "p200-s2", name: "02 Vanilla Rose", color: "#F472B6", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=DipTwist+VanillaRose+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=DipTwist+VanillaRose+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=DipTwist+VanillaRose+3"] },
+            { id: "p200-s3", name: "03 Dark Chocolate", color: "#78350F", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=DipTwist+Choc+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=DipTwist+Choc+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=DipTwist+Choc+3"] },
+            { id: "p200-s4", name: "04 Strawberry Fresh", color: "#EF4444", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=DipTwist+Strawberry+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=DipTwist+Strawberry+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=DipTwist+Strawberry+3"] }
+        ]
+    },
+    { 
+        id: 201, name: "Swiss Beauty Witch Hazel Nail Polish Remover (110 ml)", price: 99, oldPrice: 129, 
+        desc: "Acetone-free liquid nail polish remover enriched with Witch Hazel, Vitamin E, Jojoba Oil, and Aloe Vera.",
+        shades: [
+            { id: "p201-s1", name: "01 Vanilla", color: "#FDE68A", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=NailRemover+Vanilla+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=NailRemover+Vanilla+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=NailRemover+Vanilla+3"] },
+            { id: "p201-s2", name: "02 Green Aloe", color: "#10B981", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=NailRemover+Aloe+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=NailRemover+Aloe+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=NailRemover+Aloe+3"] },
+            { id: "p201-s3", name: "03 Orange", color: "#FB923C", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=NailRemover+Orange+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=NailRemover+Orange+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=NailRemover+Orange+3"] },
+            { id: "p201-s4", name: "04 Princess", color: "#F472B6", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=NailRemover+Princess+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=NailRemover+Princess+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=NailRemover+Princess+3"] }
+        ]
+    },
+    { 
+        id: 202, name: "Swiss Beauty Easy-Peasy Nail Paint Remover Wipes (32 Pcs)", price: 59, oldPrice: 89, 
+        desc: "Non-drying container of 32 nail polish remover wipes that nourish cuticles.",
+        shades: [
+            { id: "p202-s1", name: "01 Lemon with Vitamin C", color: "#FACC15", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=NailWipes+Lemon+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=NailWipes+Lemon+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=NailWipes+Lemon+3"] },
+            { id: "p202-s2", name: "02 Aloe Vera with Vitamin E", color: "#10B981", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=NailWipes+Aloe+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=NailWipes+Aloe+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=NailWipes+Aloe+3"] },
+            { id: "p202-s3", name: "03 Strawberry with Vitamin B7", color: "#F43F5E", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=NailWipes+Strawberry+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=NailWipes+Strawberry+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=NailWipes+Strawberry+3"] }
+        ]
+    },
+    { 
+        id: 203, name: "Swiss Beauty Makeup Brush Set of 5", price: 399, oldPrice: 499, 
+        desc: "Travel-friendly set of 5 soft synthetic fiber makeup brushes for effortless blending.",
+        shades: [
+            { id: "p203-s1", name: "01 Purple", color: "#A855F7", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=BrushSet5+Purple+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=BrushSet5+Purple+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=BrushSet5+Purple+3"] },
+            { id: "p203-s2", name: "02 Orange", color: "#FB923C", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=BrushSet5+Orange+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=BrushSet5+Orange+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=BrushSet5+Orange+3"] },
+            { id: "p203-s3", name: "03 Pink", color: "#F472B6", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=BrushSet5+Pink+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=BrushSet5+Pink+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=BrushSet5+Pink+3"] }
+        ]
+    },
+    { 
+        id: 204, name: "Swiss Beauty Professional Series Makeup Brush Set", price: 2699, oldPrice: 3299, 
+        desc: "Ultra-plush, densely packed synthetic bristle professional makeup brush collection.",
+        shades: [
+            { id: "p204-s1", name: "12 Piece Set (Rs 2699)", color: "#1C1C1C", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=ProBrush+12Pc+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=ProBrush+12Pc+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=ProBrush+12Pc+3"] },
+            { id: "p204-s2", name: "20 Piece Set (Rs 3999)", color: "#374151", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=ProBrush+20Pc+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=ProBrush+20Pc+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=ProBrush+20Pc+3"] }
+        ]
+    },
+
+    // --- 15 EXTRA PLACEHOLDER ITEMS (ID 205 TO 219) ---
+    { 
+        id: 205, name: "Item Placeholder 1", price: 350, oldPrice: 499, 
         desc: "Item details will go here.",
-        shades: [{ id: "p110-s1", name: "Standard", color: "#FFFFFF", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=Item+110+Pic+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=Item+110+Pic+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=Item+110+Pic+3"] }]
+        shades: [{ id: "p205-s1", name: "Standard", color: "#FFFFFF", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=Item+205+Pic+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=Item+205+Pic+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=Item+205+Pic+3"] }]
+    },
+    { 
+        id: 206, name: "Item Placeholder 2", price: 450, oldPrice: 599, 
+        desc: "Item details will go here.",
+        shades: [{ id: "p206-s1", name: "Standard", color: "#FFFFFF", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=Item+206+Pic+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=Item+206+Pic+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=Item+206+Pic+3"] }]
+    },
+    { 
+        id: 207, name: "Item Placeholder 3", price: 299, oldPrice: 399, 
+        desc: "Item details will go here.",
+        shades: [{ id: "p207-s1", name: "Standard", color: "#FFFFFF", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=Item+207+Pic+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=Item+207+Pic+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=Item+207+Pic+3"] }]
+    },
+    { 
+        id: 208, name: "Item Placeholder 4", price: 550, oldPrice: 750, 
+        desc: "Item details will go here.",
+        shades: [{ id: "p208-s1", name: "Standard", color: "#FFFFFF", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=Item+208+Pic+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=Item+208+Pic+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=Item+208+Pic+3"] }]
+    },
+    { 
+        id: 209, name: "Item Placeholder 5", price: 199, oldPrice: 299, 
+        desc: "Item details will go here.",
+        shades: [{ id: "p209-s1", name: "Standard", color: "#FFFFFF", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=Item+209+Pic+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=Item+209+Pic+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=Item+209+Pic+3"] }]
+    },
+    { 
+        id: 210, name: "Item Placeholder 6", price: 899, oldPrice: 1099, 
+        desc: "Item details will go here.",
+        shades: [{ id: "p210-s1", name: "Standard", color: "#FFFFFF", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=Item+210+Pic+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=Item+210+Pic+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=Item+210+Pic+3"] }]
+    },
+    { 
+        id: 211, name: "Item Placeholder 7", price: 399, oldPrice: 499, 
+        desc: "Item details will go here.",
+        shades: [{ id: "p211-s1", name: "Standard", color: "#FFFFFF", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=Item+211+Pic+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=Item+211+Pic+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=Item+211+Pic+3"] }]
+    },
+    { 
+        id: 212, name: "Item Placeholder 8", price: 499, oldPrice: 649, 
+        desc: "Item details will go here.",
+        shades: [{ id: "p212-s1", name: "Standard", color: "#FFFFFF", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=Item+212+Pic+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=Item+212+Pic+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=Item+212+Pic+3"] }]
+    },
+    { 
+        id: 213, name: "Item Placeholder 9", price: 650, oldPrice: 799, 
+        desc: "Item details will go here.",
+        shades: [{ id: "p213-s1", name: "Standard", color: "#FFFFFF", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=Item+213+Pic+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=Item+213+Pic+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=Item+213+Pic+3"] }]
+    },
+    { 
+        id: 214, name: "Item Placeholder 10", price: 250, oldPrice: 349, 
+        desc: "Item details will go here.",
+        shades: [{ id: "p214-s1", name: "Standard", color: "#FFFFFF", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=Item+214+Pic+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=Item+214+Pic+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=Item+214+Pic+3"] }]
+    },
+    { 
+        id: 215, name: "Item Placeholder 11", price: 799, oldPrice: 999, 
+        desc: "Item details will go here.",
+        shades: [{ id: "p215-s1", name: "Standard", color: "#FFFFFF", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=Item+215+Pic+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=Item+215+Pic+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=Item+215+Pic+3"] }]
+    },
+    { 
+        id: 216, name: "Item Placeholder 12", price: 320, oldPrice: 420, 
+        desc: "Item details will go here.",
+        shades: [{ id: "p216-s1", name: "Standard", color: "#FFFFFF", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=Item+216+Pic+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=Item+216+Pic+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=Item+216+Pic+3"] }]
+    },
+    { 
+        id: 217, name: "Item Placeholder 13", price: 599, oldPrice: 749, 
+        desc: "Item details will go here.",
+        shades: [{ id: "p217-s1", name: "Standard", color: "#FFFFFF", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=Item+217+Pic+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=Item+217+Pic+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=Item+217+Pic+3"] }]
+    },
+    { 
+        id: 218, name: "Item Placeholder 14", price: 420, oldPrice: 550, 
+        desc: "Item details will go here.",
+        shades: [{ id: "p218-s1", name: "Standard", color: "#FFFFFF", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=Item+218+Pic+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=Item+218+Pic+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=Item+218+Pic+3"] }]
+    },
+    { 
+        id: 219, name: "Item Placeholder 15", price: 950, oldPrice: 1199, 
+        desc: "Item details will go here.",
+        shades: [{ id: "p219-s1", name: "Standard", color: "#FFFFFF", images: ["https://placehold.co/400x400/FDF6F6/9B2D45?text=Item+219+Pic+1", "https://placehold.co/400x400/FDF6F6/9B2D45?text=Item+219+Pic+2", "https://placehold.co/400x400/FDF6F6/9B2D45?text=Item+219+Pic+3"] }]
     }
 ];
         // =========================================================================
