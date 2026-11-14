@@ -4271,7 +4271,7 @@ function rewardedAdWatched() {
 }
 
         // --- SEARCH FUNCTIONALITY ---
-        function updateSearch(query) {
+function updateSearch(query) {
             currentSearchQuery = query.toLowerCase();
             const mainSearch = document.getElementById('mainSearchInput');
             const sideSearch = document.getElementById('sideSearchInput');
@@ -4284,8 +4284,13 @@ function rewardedAdWatched() {
             } else { 
                 titleEl.innerHTML = `<i class="fas fa-fire text-gold-500 mr-2 text-base"></i> All Collections`; 
             }
+            
             renderGrid(); 
-            renderRateList();
+            
+            // NAYA CHANGE: Search karte waqt app ko hang hone se bachane ke liye delay
+            setTimeout(() => {
+                renderRateList();
+            }, 300); 
         }
 
         function getFilteredProducts() {
@@ -4297,7 +4302,6 @@ function rewardedAdWatched() {
                 return matchName || matchDesc || matchShade;
             });
         }
-
         // --- GRID RENDERING ---
 // --- GRID RENDERING (PROGRESSIVE LOADING / ANTI-HANG) ---
         function renderGrid() {
