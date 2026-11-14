@@ -4299,9 +4299,12 @@ function rewardedAdWatched() {
         }
 
         // --- GRID RENDERING ---
-function renderGrid() {
+// --- GRID RENDERING (PROGRESSIVE LOADING / ANTI-HANG) ---
+        function renderGrid() {
             const container = document.getElementById('productContainer');
             const countBadge = document.getElementById('productCountBadge');
+            
+            // Container ko saaf karna
             container.innerHTML = '';
             
             const productsToRender = getFilteredProducts();
@@ -4312,56 +4315,75 @@ function renderGrid() {
                 return; 
             }
 
-            let gridHTML = ""; // YAHAN HTML STORE HOGA
-            
-            productsToRender.forEach(p => {
-                let btnHTML = "";
-                if (p.shades.length > 1) {
-                    btnHTML = `<button onclick="openProductPage(${p.id}); event.stopPropagation();" class="border border-brand-900 text-brand-900 bg-brand-50/60 hover:bg-brand-900 hover:text-white rounded-xl w-full h-8 font-extrabold text-[10px] uppercase shadow-sm transition-colors flex items-center justify-center">Select Shade</button>`;
-                } else {
-                    const singleShadeId = p.shades[0].id;
-                    const singleQty = cart[singleShadeId] ? cart[singleShadeId].quantity : 0;
-                    if(singleQty > 0) {
-                        btnHTML = `<div class="bg-brand-900 text-white rounded-xl flex justify-between items-center w-full h-8 px-1 font-bold shadow-sm" onclick="event.stopPropagation()">
-                                       <button onclick="updateCart(event, ${p.id}, '${singleShadeId}', -1)" class="px-2 w-1/3 hover:bg-brand-800 rounded-lg text-base">-</button>
-                                       <span class="w-1/3 text-center text-xs font-extrabold">${singleQty}</span>
-                                       <button onclick="updateCart(event, ${p.id}, '${singleShadeId}', 1)" class="px-2 w-1/3 hover:bg-brand-800 rounded-lg text-base">+</button>
-                                   </div>`;
+            let currentIndex = 0;
+            const batchSize = 20; // Ek baar mein sirf 20 items draw honge
+
+            // Ye function recursive hai, jo array ko chote hisso mein todega
+            function loadNextBatch() {
+                let gridHTML = "";
+                const currentBatch = productsToRender.slice(currentIndex, currentIndex + batchSize);
+                
+                currentBatch.forEach(p => {
+                    let btnHTML = "";
+                    if (p.shades.length > 1) {
+                        btnHTML = `<button onclick="openProductPage(${p.id}); event.stopPropagation();" class="border border-brand-900 text-brand-900 bg-brand-50/60 hover:bg-brand-900 hover:text-white rounded-xl w-full h-8 font-extrabold text-[10px] uppercase shadow-sm transition-colors flex items-center justify-center">Select Shade</button>`;
                     } else {
-                        btnHTML = `<button onclick="updateCart(event, ${p.id}, '${singleShadeId}', 1)" class="bg-brand-900 text-gold-400 hover:bg-brand-800 rounded-xl w-full h-8 font-extrabold text-[10px] uppercase shadow-sm transition-colors flex items-center justify-center"><i class="fas fa-plus mr-1 text-[9px]"></i> Add</button>`;
+                        const singleShadeId = p.shades[0].id;
+                        const singleQty = cart[singleShadeId] ? cart[singleShadeId].quantity : 0;
+                        if(singleQty > 0) {
+                            btnHTML = `<div class="bg-brand-900 text-white rounded-xl flex justify-between items-center w-full h-8 px-1 font-bold shadow-sm" onclick="event.stopPropagation()">
+                                           <button onclick="updateCart(event, ${p.id}, '${singleShadeId}', -1)" class="px-2 w-1/3 hover:bg-brand-800 rounded-lg text-base">-</button>
+                                           <span class="w-1/3 text-center text-xs font-extrabold">${singleQty}</span>
+                                           <button onclick="updateCart(event, ${p.id}, '${singleShadeId}', 1)" class="px-2 w-1/3 hover:bg-brand-800 rounded-lg text-base">+</button>
+                                       </div>`;
+                        } else {
+                            btnHTML = `<button onclick="updateCart(event, ${p.id}, '${singleShadeId}', 1)" class="bg-brand-900 text-gold-400 hover:bg-brand-800 rounded-xl w-full h-8 font-extrabold text-[10px] uppercase shadow-sm transition-colors flex items-center justify-center"><i class="fas fa-plus mr-1 text-[9px]"></i> Add</button>`;
+                        }
                     }
-                }
 
-                const discount = Math.round(((p.oldPrice - p.price) / p.oldPrice) * 100);
-                const displayImage = p.shades[0].images[0];
-                const shadeText = p.shades.length > 1 ? `${p.shades.length} Shades Available` : `Standard Size`;
-                const isWishlisted = wishlist.includes(p.id);
+                    const discount = Math.round(((p.oldPrice - p.price) / p.oldPrice) * 100);
+                    const displayImage = p.shades[0].images[0];
+                    const shadeText = p.shades.length > 1 ? `${p.shades.length} Shades Available` : `Standard Size`;
+                    const isWishlisted = wishlist.includes(p.id);
 
-                gridHTML += `
-                    <div class="os-card bg-white p-3 rounded-2xl shadow-sm hover:shadow-md border border-brand-100/80 flex flex-col relative overflow-hidden group cursor-pointer" onclick="openProductPage(${p.id})">
-                        <div class="absolute top-2.5 left-2.5 bg-emerald-600 text-white text-[9px] font-extrabold px-2 py-0.5 rounded-md z-10 uppercase tracking-wider shadow-sm">${discount}% OFF</div>
-                        
-                        <div class="absolute top-2.5 right-2.5 z-10 bg-white/90 backdrop-blur-sm h-7 w-7 rounded-full flex items-center justify-center shadow-sm cursor-pointer border border-brand-50" onclick="toggleWishlist(event, ${p.id})">
-                            <i class="${isWishlisted ? 'fas text-brand-600' : 'far text-gray-400'} fa-heart text-sm transition-colors"></i>
-                        </div>
-
-                        <div class="h-36 w-full bg-brand-50/60 rounded-xl mb-2.5 overflow-hidden flex items-center justify-center p-2.5 relative">
-                            <img src="${displayImage}" loading="lazy" class="h-full w-full object-contain mix-blend-multiply group-hover:scale-105 transition-transform duration-500">
-                        </div>
-                        <span class="text-[9px] font-extrabold uppercase tracking-wider text-brand-500 mb-0.5">${shadeText}</span>
-                        <h4 class="font-bold text-xs sm:text-sm text-brand-900 leading-snug mb-2 line-clamp-2 min-h-[2.25rem]">${p.name}</h4>
-                        <div class="mt-auto pt-1 flex justify-between items-center gap-2 border-t border-brand-50/80">
-                            <div class="flex flex-col">
-                                <span class="font-black text-sm sm:text-base text-gray-900 leading-none">₹${p.price}</span>
-                                <span class="text-[10px] text-gray-400 line-through mt-0.5">₹${p.oldPrice}</span>
+                    gridHTML += `
+                        <div class="os-card bg-white p-3 rounded-2xl shadow-sm hover:shadow-md border border-brand-100/80 flex flex-col relative overflow-hidden group cursor-pointer" onclick="openProductPage(${p.id})">
+                            <div class="absolute top-2.5 left-2.5 bg-emerald-600 text-white text-[9px] font-extrabold px-2 py-0.5 rounded-md z-10 uppercase tracking-wider shadow-sm">${discount}% OFF</div>
+                            
+                            <div class="absolute top-2.5 right-2.5 z-10 bg-white/90 backdrop-blur-sm h-7 w-7 rounded-full flex items-center justify-center shadow-sm cursor-pointer border border-brand-50" onclick="toggleWishlist(event, ${p.id})">
+                                <i class="${isWishlisted ? 'fas text-brand-600' : 'far text-gray-400'} fa-heart text-sm transition-colors"></i>
                             </div>
-                            <div class="w-20 shrink-0">${btnHTML}</div>
-                        </div>
-                    </div>`;
-            });
-            
-            // YAHAN PAR POORA HTML EK SAATH SCREEN PAR LOAD HOGA
-            container.innerHTML = gridHTML; 
+
+                            <div class="h-36 w-full bg-brand-50/60 rounded-xl mb-2.5 overflow-hidden flex items-center justify-center p-2.5 relative">
+                                <img src="${displayImage}" loading="lazy" class="h-full w-full object-contain mix-blend-multiply group-hover:scale-105 transition-transform duration-500">
+                            </div>
+                            <span class="text-[9px] font-extrabold uppercase tracking-wider text-brand-500 mb-0.5">${shadeText}</span>
+                            <h4 class="font-bold text-xs sm:text-sm text-brand-900 leading-snug mb-2 line-clamp-2 min-h-[2.25rem]">${p.name}</h4>
+                            <div class="mt-auto pt-1 flex justify-between items-center gap-2 border-t border-brand-50/80">
+                                <div class="flex flex-col">
+                                    <span class="font-black text-sm sm:text-base text-gray-900 leading-none">₹${p.price}</span>
+                                    <span class="text-[10px] text-gray-400 line-through mt-0.5">₹${p.oldPrice}</span>
+                                </div>
+                                <div class="w-20 shrink-0">${btnHTML}</div>
+                            </div>
+                        </div>`;
+                });
+                
+                // Screen par naye products chipkana
+                container.insertAdjacentHTML('beforeend', gridHTML);
+                currentIndex += batchSize;
+
+                // Agar list mein aur products baaki hain, toh unko browser ki agli cycle mein load karna
+                if (currentIndex < productsToRender.length) {
+                    // requestAnimationFrame se browser apni speed ke hisaab se next batch load karega bina hang hue
+                    requestAnimationFrame(() => {
+                        setTimeout(loadNextBatch, 50); // 50 milliseconds ka gap taaki UI freeze na ho
+                    });
+                }
+            }
+
+            // Rendering shuru karna
+            loadNextBatch();
         }
         // --- SIDE RATE LIST ---
         function renderRateList() {
