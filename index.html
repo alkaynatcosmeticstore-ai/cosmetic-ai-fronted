@@ -4299,7 +4299,7 @@ function rewardedAdWatched() {
         }
 
         // --- GRID RENDERING ---
-        function renderGrid() {
+function renderGrid() {
             const container = document.getElementById('productContainer');
             const countBadge = document.getElementById('productCountBadge');
             container.innerHTML = '';
@@ -4312,6 +4312,8 @@ function rewardedAdWatched() {
                 return; 
             }
 
+            let gridHTML = ""; // YAHAN HTML STORE HOGA
+            
             productsToRender.forEach(p => {
                 let btnHTML = "";
                 if (p.shades.length > 1) {
@@ -4335,7 +4337,7 @@ function rewardedAdWatched() {
                 const shadeText = p.shades.length > 1 ? `${p.shades.length} Shades Available` : `Standard Size`;
                 const isWishlisted = wishlist.includes(p.id);
 
-                container.innerHTML += `
+                gridHTML += `
                     <div class="os-card bg-white p-3 rounded-2xl shadow-sm hover:shadow-md border border-brand-100/80 flex flex-col relative overflow-hidden group cursor-pointer" onclick="openProductPage(${p.id})">
                         <div class="absolute top-2.5 left-2.5 bg-emerald-600 text-white text-[9px] font-extrabold px-2 py-0.5 rounded-md z-10 uppercase tracking-wider shadow-sm">${discount}% OFF</div>
                         
@@ -4357,8 +4359,10 @@ function rewardedAdWatched() {
                         </div>
                     </div>`;
             });
+            
+            // YAHAN PAR POORA HTML EK SAATH SCREEN PAR LOAD HOGA
+            container.innerHTML = gridHTML; 
         }
-
         // --- SIDE RATE LIST ---
         function renderRateList() {
             const container = document.getElementById('rateListContainer');
