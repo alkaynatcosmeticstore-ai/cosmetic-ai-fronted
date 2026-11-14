@@ -4386,14 +4386,16 @@ function rewardedAdWatched() {
             loadNextBatch();
         }
         // --- SIDE RATE LIST ---
+       // --- SIDE RATE LIST (ANTI-HANG) ---
         function renderRateList() {
             const container = document.getElementById('rateListContainer');
-            container.innerHTML = '';
             const productsToRender = getFilteredProducts();
 
             if(productsToRender.length === 0) {
                 container.innerHTML = `<div class="text-center py-8 text-brand-300 text-xs font-bold w-full">No matching items.</div>`;
             } else {
+                let listHTML = ""; // NAYA: Ek saath HTML store karne ke liye
+                
                 productsToRender.forEach(p => {
                     p.shades.forEach(s => {
                         if (currentSearchQuery && !p.name.toLowerCase().includes(currentSearchQuery) && !s.name.toLowerCase().includes(currentSearchQuery) && !p.desc.toLowerCase().includes(currentSearchQuery)) return; 
@@ -4407,7 +4409,7 @@ function rewardedAdWatched() {
                                </div>`
                             : `<button onclick="updateCart(event, ${p.id}, '${s.id}', 1)" class="border border-brand-200 text-brand-900 bg-brand-50/50 hover:bg-brand-900 hover:text-white rounded-lg w-16 h-7 font-extrabold text-[10px] uppercase transition-colors">Add</button>`;
 
-                        container.innerHTML += `
+                        listHTML += `
                             <div class="flex items-center justify-between p-2 hover:bg-brand-50 rounded-xl border border-brand-50 transition-colors cursor-pointer bg-white" onclick="openProductPage(${p.id}, '${s.id}')">
                                 <div class="flex items-center space-x-2.5 min-w-0 flex-1 pr-2">
                                     <div class="h-10 w-10 bg-brand-50 rounded-lg border border-brand-100 p-0.5 shrink-0">
@@ -4423,26 +4425,15 @@ function rewardedAdWatched() {
                             </div>`;
                     });
                 });
+                
+                // NAYA: Loop khatam hone ke baad ek baar mein screen par dalna
+                container.innerHTML = listHTML; 
             }
+            
             let totalSelected = 0; 
             for(let sId in cart) { totalSelected += cart[sId].quantity; }
             document.getElementById('sideListSelectedCount').innerText = totalSelected;
         }
-
-        function toggleRateList() {
-            const list = document.getElementById('sideRateList');
-            if(list.classList.contains('hidden') || list.classList.contains('lg:flex')) {
-                pushAppModal('ratelist');
-                list.classList.remove('hidden', 'lg:flex', 'sticky', 'rounded-3xl');
-                list.classList.add('flex', 'fixed', 'inset-0', 'z-[70]', 'w-full', 'h-full', 'rounded-none');
-                document.body.style.overflow = 'hidden';
-            } else {
-                list.classList.add('hidden', 'lg:flex', 'sticky', 'rounded-3xl');
-                list.classList.remove('flex', 'fixed', 'inset-0', 'z-[70]', 'w-full', 'h-full', 'rounded-none');
-                popAppModal('ratelist');
-            }
-        }
-
         // --- PRODUCT PAGE & SHADE SELECTION ---
         let openProductPage = function(productId, shadeId = null) {
             pushAppModal('product'); 
