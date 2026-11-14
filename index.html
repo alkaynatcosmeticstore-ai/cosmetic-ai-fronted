@@ -5260,7 +5260,7 @@ function processOnlinePayment(appName) {
             }
         }
 
-        window.onload = () => { 
+window.onload = () => { 
             syncHeaderSpacer();
             wishlist = JSON.parse(localStorage.getItem('alKaynat_Wishlist') || '[]');
             updateWishlistBadge();
@@ -5281,8 +5281,14 @@ function processOnlinePayment(appName) {
 
             populateAddressModalFields();
             updateCartAddressDisplay();
+            
+            // 1. Pehle main products turant load karega
             renderGrid(); 
-            renderRateList(); 
+            
+            // 2. Phir 1 second ruk kar background mein Rate List banayega (Hang hone se bachane ke liye)
+            setTimeout(() => {
+                renderRateList(); 
+            }, 1000);
         };
     </script>
 </body>
