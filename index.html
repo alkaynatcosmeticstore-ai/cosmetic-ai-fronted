@@ -5271,12 +5271,21 @@ function updateSearch(query) {
             }, 300); 
         }
 
-        function getFilteredProducts() {
+function getFilteredProducts() {
             if (!currentSearchQuery) return products;
+            
+            // Search query me se space hata dete hain ('forever 52' ban jayega 'forever52')
+            const queryWithoutSpace = currentSearchQuery.replace(/\s+/g, '');
+
             return products.filter(p => {
-                const matchName = p.name.toLowerCase().includes(currentSearchQuery);
-                const matchDesc = p.desc.toLowerCase().includes(currentSearchQuery);
-                const matchShade = p.shades.some(s => s.name.toLowerCase().includes(currentSearchQuery));
+                // Product ke naam aur desc me se bhi space hata kar check karenge
+                const pName = p.name.toLowerCase().replace(/\s+/g, '');
+                const pDesc = p.desc.toLowerCase().replace(/\s+/g, '');
+                
+                const matchName = pName.includes(queryWithoutSpace);
+                const matchDesc = pDesc.includes(queryWithoutSpace);
+                const matchShade = p.shades.some(s => s.name.toLowerCase().replace(/\s+/g, '').includes(queryWithoutSpace));
+                
                 return matchName || matchDesc || matchShade;
             });
         }
