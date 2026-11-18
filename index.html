@@ -5407,7 +5407,7 @@ function getFilteredProducts() {
         }
         // --- SIDE RATE LIST ---
        // --- SIDE RATE LIST (ANTI-HANG) ---
-        function renderRateList() {
+function renderRateList() {
             const container = document.getElementById('rateListContainer');
             const productsToRender = getFilteredProducts();
 
@@ -5429,6 +5429,9 @@ function getFilteredProducts() {
                                </div>`
                             : `<button onclick="updateCart(event, ${p.id}, '${s.id}', 1)" class="border border-brand-200 text-brand-900 bg-brand-50/50 hover:bg-brand-900 hover:text-white rounded-lg w-16 h-7 font-extrabold text-[10px] uppercase transition-colors">Add</button>`;
 
+                        // ✨ NAYA CHANGE: Rate list me shade/size ke hisaab se sahi price
+                        const activePrice = s.price ? s.price : p.price;
+
                         listHTML += `
                             <div class="flex items-center justify-between p-2 hover:bg-brand-50 rounded-xl border border-brand-50 transition-colors cursor-pointer bg-white" onclick="openProductPage(${p.id}, '${s.id}')">
                                 <div class="flex items-center space-x-2.5 min-w-0 flex-1 pr-2">
@@ -5438,7 +5441,7 @@ function getFilteredProducts() {
                                     <div class="truncate">
                                         <h4 class="text-xs font-bold text-gray-800 truncate">${p.name}</h4>
                                         ${p.shades.length > 1 ? `<div class="text-[9px] text-brand-600 font-bold truncate mt-0.5 flex items-center"><span class="w-2 h-2 rounded-full mr-1 inline-block border border-gray-300" style="background-color: ${s.color}"></span>${s.name}</div>` : ''}
-                                        <span class="text-[11px] font-black text-brand-900 block mt-0.5">₹${p.price}</span>
+                                        <span class="text-[11px] font-black text-brand-900 block mt-0.5">₹${activePrice}</span>
                                     </div>
                                 </div>
                                 <div class="shrink-0" onclick="event.stopPropagation()">${btnHTML}</div>
@@ -5492,7 +5495,7 @@ function getFilteredProducts() {
             document.body.style.overflow = 'hidden';
         }
 
-        function selectShade(shadeId) {
+       function selectShade(shadeId) {
             currentSelectedShadeId = shadeId;
             const p = products.find(x => x.id === currentOpenProductId);
             const shade = p.shades.find(s => s.id === shadeId);
@@ -5526,9 +5529,19 @@ function getFilteredProducts() {
             [0,1,2].forEach(i => document.getElementById(`pdThumb${i}`).classList.replace('border-brand-900', 'border-transparent'));
             document.getElementById('pdThumb0').classList.replace('border-transparent', 'border-brand-900');
 
+            // ✨ NAYA PRICE UPDATE KARNE KA CODE ✨
+            // Agar shade me khud ka price hai toh wo lo, warna bahar ka default price lo
+            const activePrice = shade.price ? shade.price : p.price;
+            const activeOldPrice = shade.oldPrice ? shade.oldPrice : p.oldPrice;
+
+            document.getElementById('pdPrice').innerText = "₹" + activePrice;
+            document.getElementById('pdOldPrice').innerText = "₹" + activeOldPrice;
+            
+            // Discount tag update
+            document.getElementById('pdDiscountTag').innerText = Math.round(((activeOldPrice - activePrice) / activeOldPrice) * 100) + "% OFF";
+
             updatePdActionBtn();
         }
-
         function updatePdActionBtn() {
             const container = document.getElementById('pdActionContainer');
             const qty = cart[currentSelectedShadeId] ? cart[currentSelectedShadeId].quantity : 0;
@@ -5585,13 +5598,17 @@ function getFilteredProducts() {
         }
 
         // --- CART SYSTEM ---
-        function updateCart(event, productId, shadeId, change) {
+       function updateCart(event, productId, shadeId, change) {
             if(event) event.stopPropagation(); 
             if (!cart[shadeId]) {
                 const p = products.find(x => x.id === productId);
                 const s = p.shades.find(x => x.id === shadeId);
+                
+                // ✨ NAYA CHANGE: Check karega ki shade ka apna alag price hai ya nahi
+                const activePrice = s.price ? s.price : p.price; 
+                
                 cart[shadeId] = { 
-                    productId: p.id, productName: p.name, price: p.price, shadeId: s.id, 
+                    productId: p.id, productName: p.name, price: activePrice, shadeId: s.id, 
                     shadeName: s.name, color: s.color, image: s.images[0], quantity: 0, 
                     isSingle: p.shades.length === 1 
                 };
