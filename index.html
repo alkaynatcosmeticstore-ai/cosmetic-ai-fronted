@@ -5579,7 +5579,7 @@ function renderRateList() {
         // --- IMAGE ZOOM + ADMOB INTERSTITIAL (100% INTACT) ---
         let openImagePreview = function() {
             pushAppModal('image'); 
-            if (typeof AndroidBridge !== "undefined") { AndroidBridge.showInterstitialAd(); }
+if (window.Android && window.Android.showInterstitialAd) { window.Android.showInterstitialAd(); }
             const currentImgSrc = document.getElementById('pdMainImg').src;
             document.getElementById('previewMainImg').src = currentImgSrc;
             const modal = document.getElementById('imagePreviewModal');
