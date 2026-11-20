@@ -5673,9 +5673,22 @@ function renderRateList() {
         }
 
         // --- IMAGE ZOOM + ADMOB INTERSTITIAL (100% INTACT) ---
+       let imageZoomCount = parseInt(localStorage.getItem('alKaynat_ZoomCount')) || 0;
+
         let openImagePreview = function() {
             pushAppModal('image'); 
-if (window.Android && window.Android.showInterstitialAd) { window.Android.showInterstitialAd(); }
+
+            imageZoomCount++;
+            if (imageZoomCount >= 3) {
+                imageZoomCount = 0;
+                localStorage.setItem('alKaynat_ZoomCount', imageZoomCount);
+                if (window.Android && window.Android.showInterstitialAd) {
+                    window.Android.showInterstitialAd();
+                }
+            } else {
+                localStorage.setItem('alKaynat_ZoomCount', imageZoomCount);
+            }
+
             const currentImgSrc = document.getElementById('pdMainImg').src;
             document.getElementById('previewMainImg').src = currentImgSrc;
             const modal = document.getElementById('imagePreviewModal');
@@ -5692,7 +5705,6 @@ if (window.Android && window.Android.showInterstitialAd) { window.Android.showIn
             setTimeout(() => { document.getElementById('imagePreviewModal').classList.add('hidden'); }, 200);
             popAppModal('image'); 
         }
-
         // --- CART SYSTEM ---
        function updateCart(event, productId, shadeId, change) {
             if(event) event.stopPropagation(); 
