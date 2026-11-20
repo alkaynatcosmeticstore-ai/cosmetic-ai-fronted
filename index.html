@@ -6121,15 +6121,14 @@ function processOnlinePayment(appName) {
             selectedUPIApp = appName; 
             closePaymentModal(); 
             
-            let merchantUpiId = "gausshaikh14@bpunity"; 
+            let merchantUpiId = "BHARATPE.9N0C0N1J5I304069@unitype"; 
             let storeName = "Al Kaynat Cosmetic";
-            let amountToPay = document.getElementById('billGrandTotal').innerText;
-            let orderNote = "Order by " + customerName;
-            let transactionId = "TXN" + Date.now();
+            let rawAmount = document.getElementById('billGrandTotal').innerText.trim();
+            let amountToPay = parseFloat(rawAmount).toFixed(2);
+            let orderNote = "Order by " + (customerName || "Customer");
             
-            let upiUrl = `upi://pay?pa=${merchantUpiId}&pn=${encodeURIComponent(storeName)}&am=${amountToPay}&tn=${encodeURIComponent(orderNote)}&tr=${transactionId}&mc=5499&cu=INR`;
+            let upiUrl = `upi://pay?pa=${merchantUpiId}&pn=${encodeURIComponent(storeName)}&am=${amountToPay}&tn=${encodeURIComponent(orderNote)}&cu=INR`;
             
-            // NAYA: Ab hum Android Studio ko link bhejenge, direct open nahi karenge
             if (window.Android && window.Android.startUPIPayment) {
                 window.Android.startUPIPayment(upiUrl);
             } else {
