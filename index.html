@@ -5748,22 +5748,25 @@ function renderRateList() {
             popAppModal('product'); 
         }
 
-        // --- IMAGE ZOOM + ADMOB INTERSTITIAL (100% INTACT) ---
-       let imageZoomCount = parseInt(localStorage.getItem('alKaynat_ZoomCount')) || 0;
+// --- IMAGE CHANGE ADMOB INTERSTITIAL (HAR 3RD CLICK PAR) ---
+        let imageChangeCount = parseInt(localStorage.getItem('alKaynat_ImgChangeCount')) || 0;
 
-        let openImagePreview = function() {
-            pushAppModal('image'); 
-
-            imageZoomCount++;
-            if (imageZoomCount >= 3) {
-                imageZoomCount = 0;
-                localStorage.setItem('alKaynat_ZoomCount', imageZoomCount);
+        function trackImageChangeAd() {
+            imageChangeCount++;
+            if (imageChangeCount >= 3) {
+                imageChangeCount = 0;
+                localStorage.setItem('alKaynat_ImgChangeCount', imageChangeCount);
                 if (window.Android && window.Android.showInterstitialAd) {
                     window.Android.showInterstitialAd();
                 }
             } else {
-                localStorage.setItem('alKaynat_ZoomCount', imageZoomCount);
+                localStorage.setItem('alKaynat_ImgChangeCount', imageChangeCount);
             }
+        }
+
+        // --- IMAGE ZOOM (BINA AD KE) ---
+        let openImagePreview = function() {
+            pushAppModal('image');
 
             const currentImgSrc = document.getElementById('pdMainImg').src;
             document.getElementById('previewMainImg').src = currentImgSrc;
@@ -5779,7 +5782,7 @@ function renderRateList() {
             document.getElementById('previewMainImg').classList.remove('scale-100');
             document.getElementById('previewMainImg').classList.add('scale-90');
             setTimeout(() => { document.getElementById('imagePreviewModal').classList.add('hidden'); }, 200);
-            popAppModal('image'); 
+            popAppModal('image');
         }
         // --- CART SYSTEM ---
        function updateCart(event, productId, shadeId, change) {
