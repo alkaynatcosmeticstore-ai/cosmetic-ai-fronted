@@ -5679,16 +5679,21 @@ function renderRateList() {
                 document.getElementById(`swatch-${shadeId}`).classList.add('shade-active');
             }
 
-            document.getElementById('pdMainImg').src = shade.images[0];
+document.getElementById('pdMainImg').src = shade.images[0];
             const setThumb = (index, src) => {
                 const el = document.getElementById(`pdThumb${index}`);
                 if(src) {
                     el.src = src;
                     el.classList.remove('hidden');
-                    el.onclick = function() { 
-                        document.getElementById('pdMainImg').src = src; 
+                    el.onclick = function() {
+                        const mainImg = document.getElementById('pdMainImg');
+                        if (mainImg.src === el.src) return; // Same photo par tap ho toh count na badhe
+
+                        mainImg.src = src;
                         [0,1,2].forEach(i => document.getElementById(`pdThumb${i}`).classList.replace('border-brand-900', 'border-transparent'));
                         el.classList.replace('border-transparent', 'border-brand-900');
+
+                        trackImageChangeAd(); // Har 3rd image change par ad
                     };
                 } else {
                     el.classList.add('hidden');
