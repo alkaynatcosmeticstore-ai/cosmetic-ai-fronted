@@ -364,7 +364,7 @@
     </div>
 
     <!-- WISHLIST SLIDE PANEL -->
-<!-- Wishlist Overlay -->
+    <!-- Wishlist Overlay -->
     <div id="wishlistOverlay" class="fixed inset-0 bg-black/60 z-50 hidden modal-fade backdrop-blur-sm" onclick="closeWishlist()"></div>
     
     <!-- Wishlist Panel -->
@@ -416,12 +416,13 @@
 
             <div class="flex space-x-3">
                 <button onclick="closeAdModal()" class="flex-1 py-3 bg-gray-100 hover:bg-gray-200 text-gray-800 font-bold rounded-xl text-sm transition-colors">Cancel</button>
-                <button onclick="confirmWatchAd()" class="flex-1 py-3 bg-rose-500 hover:bg-rose-600 text-white font-bold rounded-xl text-sm transition-colors flex justify-center items-center shadow-md">
+                <button onclick="confirmWatchAd(this)" class="flex-1 py-3 bg-rose-500 hover:bg-rose-600 text-white font-bold rounded-xl text-sm transition-colors flex justify-center items-center shadow-md">
                     <i class="fas fa-play mr-2"></i> Watch Ad
                 </button>
             </div>
         </div>
     </div>
+
     <!-- 📍 ADDRESS ADD / EDIT MODAL (z-[95] so it opens cleanly over Cart & Profile) -->
     <div id="addressModal" class="fixed inset-0 bg-black/70 z-[95] hidden flex items-end sm:items-center justify-center modal-fade backdrop-blur-sm" onclick="if(event.target === this) closeAddressModal()">
         <div class="bg-white w-full sm:w-[450px] rounded-t-3xl sm:rounded-3xl p-6 transform transition-transform slide-up shadow-2xl border border-brand-100 max-h-[90vh] overflow-y-auto custom-scrollbar">
@@ -447,7 +448,7 @@
                     <input type="text" id="custHouse" placeholder="Flat, House no., Building, Company" class="w-full bg-brand-50/60 border border-brand-200 rounded-xl px-4 py-3 text-sm font-medium outline-none focus:border-brand-600 focus:bg-white mb-2.5">
                     <input type="text" id="custArea" placeholder="Area, Street, Sector, Village" class="w-full bg-brand-50/60 border border-brand-200 rounded-xl px-4 py-3 text-sm font-medium outline-none focus:border-brand-600 focus:bg-white mb-2.5">
                     <div class="flex gap-2.5 mb-4">
-                        <input type="number" id="custPin" placeholder="Pincode" class="w-1/2 bg-brand-50/60 border border-brand-200 rounded-xl px-4 py-3 text-sm font-medium outline-none focus:border-brand-600 focus:bg-white" maxlength="6">
+                        <input type="tel" inputmode="numeric" id="custPin" placeholder="Pincode" class="w-1/2 bg-brand-50/60 border border-brand-200 rounded-xl px-4 py-3 text-sm font-medium outline-none focus:border-brand-600 focus:bg-white" maxlength="6">
                         <input type="text" id="custCity" placeholder="Town/City" class="w-1/2 bg-brand-50/60 border border-brand-200 rounded-xl px-4 py-3 text-sm font-medium outline-none focus:border-brand-600 focus:bg-white">
                     </div>
                 </div>
@@ -456,7 +457,7 @@
         </div>
     </div>
 
-    <!-- ONLY ONLINE PAYMENT MODAL -->
+    <!-- PAYMENT MODAL (UPI + PIN 445206 COD) -->
     <div id="paymentModal" class="fixed inset-0 bg-black/70 z-[70] hidden flex items-end sm:items-center justify-center modal-fade backdrop-blur-sm" onclick="if(event.target === this) closePaymentModal()">
         <div class="bg-white w-full sm:w-[400px] rounded-t-3xl sm:rounded-3xl relative shadow-2xl flex flex-col slide-up border border-brand-100 overflow-hidden">
             <div class="p-5 border-b border-brand-50 flex justify-between items-center bg-brand-50/40">
@@ -468,7 +469,7 @@
             </div>
             
             <div class="p-6">
-                <h3 class="text-[11px] font-extrabold text-brand-500 uppercase tracking-wider mb-3.5">Pay securely via UPI (Online Only)</h3>
+                <h3 class="text-[11px] font-extrabold text-brand-500 uppercase tracking-wider mb-3.5">Pay securely via UPI</h3>
                 <div class="space-y-3">
                     <div onclick="processOnlinePayment('Google Pay')" class="border border-brand-100 rounded-2xl p-3.5 flex justify-between items-center cursor-pointer hover:bg-brand-50 active:scale-98 transition-all shadow-sm">
                         <div class="flex items-center space-x-3.5"><img src="https://upload.wikimedia.org/wikipedia/commons/f/f2/Google_Pay_Logo.svg" class="h-8 w-8 object-contain bg-white rounded-full border border-gray-100 p-1"><span class="font-bold text-gray-800">Google Pay</span></div>
@@ -483,7 +484,33 @@
                         <i class="fas fa-chevron-right text-gray-300"></i>
                     </div>
                 </div>
-                <div class="mt-6 flex items-center justify-center space-x-2 text-[10px] text-gray-400 font-bold uppercase tracking-widest border-t border-brand-50 pt-4">
+
+                <!-- CASH ON DELIVERY (SIRF 445206 PIN PAR DIKHEGA) -->
+                <div id="codOptionBox" class="hidden mt-4 pt-4 border-t border-brand-100">
+                    <h3 class="text-[11px] font-extrabold text-emerald-600 uppercase tracking-wider mb-2.5">Cash on Delivery Available</h3>
+                    <button id="codPlaceOrderBtn" onclick="processCodOrder(this)" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white py-3.5 px-4 rounded-2xl font-extrabold shadow-md flex items-center justify-between active:scale-98 transition-all">
+                        <span class="flex items-center">
+                            <span class="h-8 w-8 bg-white/20 rounded-full flex items-center justify-center mr-3 shrink-0">
+                                <i class="fas fa-money-bill-wave text-sm"></i>
+                            </span>
+                            <span class="text-left leading-tight">
+                                <span class="block text-sm">Cash on Delivery</span>
+                                <span id="codDeliveryInfoText" class="block text-[10px] font-semibold text-emerald-100">PIN 445206 • Direct Confirm</span>
+                            </span>
+                        </span>
+                        <span class="bg-white/20 px-2.5 py-1 rounded-xl text-xs font-black">₹<span id="codBtnTotal">0</span></span>
+                    </button>
+                </div>
+
+                <!-- BAAKI PINCODES KE LIYE MESSAGE -->
+                <div id="codUnavailableNote" class="hidden mt-4 pt-3 border-t border-brand-50 text-center">
+                    <p class="text-[11px] font-semibold text-gray-400">
+                        <i class="fas fa-info-circle text-brand-400 mr-1"></i>
+                        Cash on Delivery sirf <span class="text-gray-600 font-bold">445206</span> pincode par available hai.
+                    </p>
+                </div>
+
+                <div class="mt-5 flex items-center justify-center space-x-2 text-[10px] text-gray-400 font-bold uppercase tracking-widest border-t border-brand-50 pt-4">
                     <i class="fas fa-lock text-emerald-500"></i> <span>100% Secure Payments</span>
                 </div>
             </div>
@@ -576,7 +603,50 @@
         </div>
     </div>
 
-    <script>
+    <!-- COD DIRECT ORDER CONFIRMED MODAL -->
+    <div id="codSuccessModal" class="hidden fixed inset-0 z-[120] bg-black/70 backdrop-blur-sm flex items-center justify-center p-4">
+        <div class="bg-white w-full max-w-sm rounded-3xl p-6 shadow-2xl border border-brand-100 text-center">
+            <div class="h-16 w-16 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mx-auto mb-3 shadow-sm">
+                <i class="fas fa-check text-3xl"></i>
+            </div>
+            <h3 class="text-xl font-black text-brand-900 brand-font">Order Confirmed!</h3>
+            <p class="text-xs text-gray-500 font-medium mt-1">Aapka Cash on Delivery order receive ho gaya hai.</p>
+
+            <div class="bg-brand-50/70 border border-brand-100 rounded-2xl p-3.5 mt-4 text-left space-y-1.5 text-xs">
+                <div class="flex justify-between">
+                    <span class="text-gray-500 font-semibold">Order ID</span>
+                    <span id="codSuccessOrderId" class="font-black text-brand-900">-</span>
+                </div>
+                <div class="flex justify-between">
+                    <span class="text-gray-500 font-semibold">Payment Mode</span>
+                    <span class="font-extrabold text-emerald-700">Cash on Delivery</span>
+                </div>
+                <div class="flex justify-between">
+                    <span class="text-gray-500 font-semibold">Items Subtotal</span>
+                    <span class="font-bold text-gray-800">₹<span id="codSuccessSubtotal">0</span></span>
+                </div>
+                <div class="flex justify-between">
+                    <span class="text-gray-500 font-semibold">Delivery Charge</span>
+                    <span class="font-bold text-gray-800">₹<span id="codSuccessDelivery">0</span></span>
+                </div>
+                <div class="flex justify-between pt-2 border-t border-brand-100 text-sm">
+                    <span class="font-extrabold text-brand-900">Pay on Delivery</span>
+                    <span class="font-black text-brand-900">₹<span id="codSuccessTotal">0</span></span>
+                </div>
+            </div>
+
+            <div class="mt-5 flex flex-col gap-2.5">
+                <button onclick="closeCodSuccessModal(); openMyOrders();" class="w-full bg-brand-900 text-gold-400 py-3 rounded-2xl font-extrabold text-sm shadow-md active:scale-95 transition-transform">
+                    <i class="fas fa-box-open mr-1.5"></i> Track My Order
+                </button>
+                <button onclick="closeCodSuccessModal()" class="w-full bg-brand-50 text-brand-900 border border-brand-200 py-3 rounded-2xl font-extrabold text-sm active:scale-95 transition-transform">
+                    Continue Shopping
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>    
         // =========================================================================
         // 🛍️ DATA: PRODUCTS (SIRF  PRODUCTS RAKHE HAIN, BAAKI NICHE PASTE KAR LO)
         // =========================================================================
@@ -5334,7 +5404,11 @@ const products = [
         // =========================================================================
         // LOGIC & STATE
         // =========================================================================
-        const ownerWhatsAppNumber = "919307632126"; 
+const ownerWhatsAppNumber = "919307632126"; 
+        const COD_BACKEND_URL = "https://script.google.com/macros/s/AKfycbyuT__B9JJDUZOoL_j6x5ocVGLrQbceyPY1CVV2mw8ukSM07LIJxUxNZQ6t0gyOsDx7/exec";
+        const COD_ALLOWED_PIN = "445206";
+        let isCodSubmitting = false;
+
         let cart = {}; 
         let wishlist = []; 
         let currentAddress = "Select Location"; 
@@ -5378,7 +5452,6 @@ const products = [
             updateSearch(brandQuery);
         }
 
-// --- WISHLIST FUNCTIONALITY ---
 // --- WISHLIST FUNCTIONALITY ---
 // Limit aur Ads Watched dono ko LocalStorage se nikalenge
 let wishlistLimit = parseInt(localStorage.getItem('alKaynat_WishlistLimit')) || 5;
@@ -5619,8 +5692,7 @@ function getFilteredProducts() {
                 return matchName || matchDesc || matchShade;
             });
         }
-        // --- GRID RENDERING ---
-// --- GRID RENDERING (PROGRESSIVE LOADING / ANTI-HANG) ---
+        // --- GRID RENDERING (PROGRESSIVE LOADING / ANTI-HANG) ---
         function renderGrid() {
             const container = document.getElementById('productContainer');
             const countBadge = document.getElementById('productCountBadge');
@@ -5635,7 +5707,6 @@ function getFilteredProducts() {
             }
 
             if(productsToRender.length === 0) { 
-                // ... aage ka code same rahega ... 
                 container.innerHTML = `<div class="col-span-full text-center py-14 text-brand-400 font-bold w-full bg-white rounded-3xl border border-brand-100"><i class="fas fa-search text-4xl mb-3 block text-brand-200"></i>No products found.</div>`; 
                 return; 
             }
@@ -5700,7 +5771,6 @@ function getFilteredProducts() {
 
                 // Agar list mein aur products baaki hain, toh unko browser ki agli cycle mein load karna
                 if (currentIndex < productsToRender.length) {
-                    // requestAnimationFrame se browser apni speed ke hisaab se next batch load karega bina hang hue
                     requestAnimationFrame(() => {
                         setTimeout(loadNextBatch, 50); // 50 milliseconds ka gap taaki UI freeze na ho
                     });
@@ -5710,8 +5780,7 @@ function getFilteredProducts() {
             // Rendering shuru karna
             loadNextBatch();
         }
-        // --- SIDE RATE LIST ---
-       // --- SIDE RATE LIST (ANTI-HANG) ---
+        // --- SIDE RATE LIST (ANTI-HANG) ---
 function renderRateList() {
             const container = document.getElementById('rateListContainer');
             const productsToRender = getFilteredProducts();
@@ -5719,7 +5788,7 @@ function renderRateList() {
             if(productsToRender.length === 0) {
                 container.innerHTML = `<div class="text-center py-8 text-brand-300 text-xs font-bold w-full">No matching items.</div>`;
             } else {
-                let listHTML = ""; // NAYA: Ek saath HTML store karne ke liye
+                let listHTML = "";
                 
                 productsToRender.forEach(p => {
                     p.shades.forEach(s => {
@@ -5734,7 +5803,6 @@ function renderRateList() {
                                </div>`
                             : `<button onclick="updateCart(event, ${p.id}, '${s.id}', 1)" class="border border-brand-200 text-brand-900 bg-brand-50/50 hover:bg-brand-900 hover:text-white rounded-lg w-16 h-7 font-extrabold text-[10px] uppercase transition-colors">Add</button>`;
 
-                        // ✨ NAYA CHANGE: Rate list me shade/size ke hisaab se sahi price
                         const activePrice = s.price ? s.price : p.price;
 
                         listHTML += `
@@ -5754,7 +5822,6 @@ function renderRateList() {
                     });
                 });
                 
-                // NAYA: Loop khatam hone ke baad ek baar mein screen par dalna
                 container.innerHTML = listHTML; 
             }
             
@@ -5812,7 +5879,7 @@ function renderRateList() {
                 document.getElementById(`swatch-${shadeId}`).classList.add('shade-active');
             }
 
-document.getElementById('pdMainImg').src = shade.images[0];
+            document.getElementById('pdMainImg').src = shade.images[0];
             const setThumb = (index, src) => {
                 const el = document.getElementById(`pdThumb${index}`);
                 if(src) {
@@ -5840,7 +5907,6 @@ document.getElementById('pdMainImg').src = shade.images[0];
             document.getElementById('pdThumb0').classList.replace('border-transparent', 'border-brand-900');
 
             // ✨ NAYA PRICE UPDATE KARNE KA CODE ✨
-            // Agar shade me khud ka price hai toh wo lo, warna bahar ka default price lo
             const activePrice = shade.price ? shade.price : p.price;
             const activeOldPrice = shade.oldPrice ? shade.oldPrice : p.oldPrice;
 
@@ -5886,7 +5952,7 @@ document.getElementById('pdMainImg').src = shade.images[0];
             popAppModal('product'); 
         }
 
-// --- IMAGE CHANGE ADMOB INTERSTITIAL (HAR 3RD CLICK PAR) ---
+        // --- IMAGE CHANGE ADMOB INTERSTITIAL (HAR 3RD CLICK PAR) ---
         let imageChangeCount = parseInt(localStorage.getItem('alKaynat_ImgChangeCount')) || 0;
 
         function trackImageChangeAd() {
@@ -5922,14 +5988,51 @@ document.getElementById('pdMainImg').src = shade.images[0];
             setTimeout(() => { document.getElementById('imagePreviewModal').classList.add('hidden'); }, 200);
             popAppModal('image');
         }
-        // --- CART SYSTEM ---
-       function updateCart(event, productId, shadeId, change) {
+
+        // --- CART SYSTEM + PIN 445206 DELIVERY CALCULATION ---
+        function getCurrentPin() {
+            try {
+                const savedFields = JSON.parse(localStorage.getItem('alKaynat_addrFields') || 'null');
+                if (savedFields && savedFields.pin) {
+                    return String(savedFields.pin).replace(/\D/g, '').trim();
+                }
+            } catch (e) {}
+            const match = String(currentAddress || "").match(/\b\d{6}\b/);
+            return match ? match[0] : "";
+        }
+
+        function getCartTotals() {
+            let count = 0;
+            let itemTotal = 0;
+            for (let sId in cart) {
+                count += cart[sId].quantity;
+                itemTotal += (cart[sId].price * cart[sId].quantity);
+            }
+
+            const userPin = getCurrentPin();
+            let deliveryFee = 0;
+            if (count > 0) {
+                if (userPin === COD_ALLOWED_PIN) {
+                    deliveryFee = itemTotal < 550 ? 15 : 25;
+                } else {
+                    deliveryFee = itemTotal < 500 ? 49 : 0;
+                }
+            }
+
+            return {
+                count,
+                itemTotal,
+                deliveryFee,
+                grandTotal: itemTotal + deliveryFee,
+                userPin
+            };
+        }
+
+        function updateCart(event, productId, shadeId, change) {
             if(event) event.stopPropagation(); 
             if (!cart[shadeId]) {
                 const p = products.find(x => x.id === productId);
                 const s = p.shades.find(x => x.id === shadeId);
-                
-                // ✨ NAYA CHANGE: Check karega ki shade ka apna alag price hai ya nahi
                 const activePrice = s.price ? s.price : p.price; 
                 
                 cart[shadeId] = { 
@@ -5960,14 +6063,11 @@ document.getElementById('pdMainImg').src = shade.images[0];
         }
 
         function updateCartUI() {
-            let count = 0; let itemTotal = 0;
             const listContainer = document.getElementById('cartItemsList');
             listContainer.innerHTML = '';
 
             for (let sId in cart) {
                 const item = cart[sId];
-                count += item.quantity; 
-                itemTotal += (item.price * item.quantity);
                 let shadeTextHtml = item.isSingle ? `` : `<div class="text-[10px] text-brand-600 font-bold mt-0.5 flex items-center"><div class="w-2.5 h-2.5 rounded-full mr-1.5 border border-gray-300" style="background-color: ${item.color}"></div>${item.shadeName}</div>`;
 
                 listContainer.innerHTML += `
@@ -5988,8 +6088,7 @@ document.getElementById('pdMainImg').src = shade.images[0];
                     </div>`;
             }
 
-            let deliveryFee = (count > 0 && itemTotal < 500) ? 49 : 0; 
-            let grandTotal = itemTotal + deliveryFee;
+            const { count, itemTotal, deliveryFee, grandTotal } = getCartTotals();
 
             const navBadge = document.getElementById('navCartBadge');
             const bottomBadge = document.getElementById('bottomCartBadge');
@@ -6008,13 +6107,14 @@ document.getElementById('pdMainImg').src = shade.images[0];
             document.getElementById('payModalTotal').innerText = grandTotal;
 
             updateCartAddressDisplay();
+            updateCodOptionUI();
 
             if (count === 0 && activeModals.includes('cart')) { closeCart(); }
         }
 
         let openCart = function() {
             if(Object.keys(cart).length === 0) return;
-            updateCartAddressDisplay();
+            updateCartUI();
             pushAppModal('cart'); 
             document.getElementById('cartOverlay').classList.remove('hidden');
             setTimeout(() => { document.getElementById('cartPanel').classList.remove('translate-x-full'); }, 10);
@@ -6294,14 +6394,14 @@ document.getElementById('pdMainImg').src = shade.images[0];
 
         function setCustomAddress() {
             const name = document.getElementById('custName').value.trim(); 
-            const phone = document.getElementById('custPhone').value.trim(); 
+            const phone = document.getElementById('custPhone').value.replace(/\D/g, '').trim(); 
             const house = document.getElementById('custHouse').value.trim(); 
             const area = document.getElementById('custArea').value.trim(); 
-            const pin = document.getElementById('custPin').value.trim(); 
+            const pin = document.getElementById('custPin').value.replace(/\D/g, '').trim(); 
             const city = document.getElementById('custCity').value.trim();
             
-            if (!name || phone.length !== 10 || !house || !area || !pin || !city) { 
-                alert("Please fill all details and ensure phone number is 10 digits."); 
+            if (!name || phone.length !== 10 || !house || !area || pin.length !== 6 || !city) { 
+                alert("Please fill all details (10-digit phone number aur 6-digit pincode zaroori hai)."); 
                 return; 
             }
             
@@ -6316,7 +6416,7 @@ document.getElementById('pdMainImg').src = shade.images[0];
             localStorage.setItem('alKaynat_addrFields', JSON.stringify({ name, phone, house, area, pin, city }));
             
             document.getElementById('topAddressText').innerText = city + " - " + pin; 
-            updateCartAddressDisplay();
+            updateCartUI();
             if (activeModals.includes('myorders')) {
                 renderMyOrders();
             }
@@ -6332,11 +6432,14 @@ document.getElementById('pdMainImg').src = shade.images[0];
             if (!userLoggedIn) { openLoginModal(); return; }
             if (currentAddress === "Select Location" || !customerName) { openAddressModal(); return; }
             
+            updateCartUI();
+
             document.getElementById('cartPanel').classList.add('translate-x-full');
             setTimeout(() => { document.getElementById('cartOverlay').classList.add('hidden'); }, 300);
             let cartIdx = activeModals.indexOf('cart');
             if (cartIdx > -1) activeModals.splice(cartIdx, 1);
 
+            updateCodOptionUI();
             pushAppModal('payment');
             document.getElementById('paymentModal').classList.remove('hidden'); 
         }
@@ -6346,7 +6449,138 @@ document.getElementById('pdMainImg').src = shade.images[0];
             popAppModal('payment');
         }
 
-function processOnlinePayment(appName) {
+        function updateCodOptionUI() {
+            const codBox = document.getElementById('codOptionBox');
+            const codNote = document.getElementById('codUnavailableNote');
+            if (!codBox || !codNote) return;
+
+            const { userPin, deliveryFee, grandTotal } = getCartTotals();
+
+            if (userPin === COD_ALLOWED_PIN) {
+                codBox.classList.remove('hidden');
+                codNote.classList.add('hidden');
+                const codBtnTotal = document.getElementById('codBtnTotal');
+                const codInfo = document.getElementById('codDeliveryInfoText');
+                if (codBtnTotal) codBtnTotal.innerText = grandTotal;
+                if (codInfo) codInfo.innerText = `PIN 445206 • Delivery ₹${deliveryFee} included`;
+            } else {
+                codBox.classList.add('hidden');
+                codNote.classList.remove('hidden');
+            }
+        }
+
+        async function processCodOrder(btn) {
+            if (isCodSubmitting) return;
+
+            const { count, itemTotal, deliveryFee, grandTotal, userPin } = getCartTotals();
+
+            if (userPin !== COD_ALLOWED_PIN) {
+                alert("Cash on Delivery sirf 445206 pincode par available hai.");
+                return;
+            }
+            if (count === 0) {
+                alert("Aapka cart khali hai.");
+                return;
+            }
+
+            isCodSubmitting = true;
+            const originalHTML = btn ? btn.innerHTML : "";
+            if (btn) {
+                btn.disabled = true;
+                btn.innerHTML = `<span class="w-full text-center flex items-center justify-center"><i class="fas fa-spinner fa-spin mr-2"></i> Confirming Order...</span>`;
+            }
+
+            let itemsSummary = [];
+            let orderItems = [];
+            for (let sId in cart) {
+                const it = cart[sId];
+                const shadeLabel = it.isSingle ? "" : ` (${it.shadeName})`;
+                itemsSummary.push(`${it.productName}${shadeLabel} x${it.quantity} = ₹${it.price * it.quantity}`);
+                orderItems.push({
+                    name: it.productName,
+                    shade: it.isSingle ? '' : it.shadeName,
+                    qty: it.quantity,
+                    price: it.price,
+                    image: it.image
+                });
+            }
+
+            const payload = {
+                paymentMode: "COD",
+                pin: userPin,
+                name: customerName,
+                phone: customerPhone,
+                address: currentAddress,
+                items: itemsSummary.join(" | "),
+                subtotal: itemTotal
+            };
+
+            try {
+                const res = await fetch(COD_BACKEND_URL, {
+                    method: "POST",
+                    headers: { "Content-Type": "text/plain;charset=utf-8" },
+                    body: JSON.stringify(payload)
+                });
+                const result = await res.json();
+
+                if (result.status !== "success") {
+                    throw new Error(result.message || "Order confirm nahi ho paya.");
+                }
+
+                const finalOrderId = result.orderId;
+                const finalSubtotal = result.subtotal;
+                const finalDelivery = result.deliveryCharge;
+                const finalTotal = result.finalTotal;
+
+                let history = JSON.parse(localStorage.getItem('alKaynatHistory') || '[]');
+                history.push({
+                    id: finalOrderId + " (COD)",
+                    total: finalTotal,
+                    time: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
+                    date: new Date().toLocaleDateString()
+                });
+                localStorage.setItem('alKaynatHistory', JSON.stringify(history));
+
+                let myOrders = JSON.parse(localStorage.getItem('alKaynat_Orders_' + customerPhone) || '[]');
+                myOrders.unshift({
+                    orderId: finalOrderId,
+                    date: new Date().toLocaleDateString(),
+                    time: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
+                    timestamp: new Date().getTime(),
+                    total: finalTotal,
+                    status: 'Order Placed (COD)',
+                    items: orderItems
+                });
+                localStorage.setItem('alKaynat_Orders_' + customerPhone, JSON.stringify(myOrders));
+
+                cart = {};
+                renderGrid();
+                renderRateList();
+                updateCartUI();
+                closePaymentModal();
+
+                document.getElementById('codSuccessOrderId').innerText = "#" + finalOrderId;
+                document.getElementById('codSuccessSubtotal').innerText = finalSubtotal;
+                document.getElementById('codSuccessDelivery').innerText = finalDelivery;
+                document.getElementById('codSuccessTotal').innerText = finalTotal;
+                document.getElementById('codSuccessModal').classList.remove('hidden');
+
+            } catch (err) {
+                alert("Order place nahi ho paya. Internet check karke dobara try karein.\n" + err.message);
+            } finally {
+                isCodSubmitting = false;
+                if (btn) {
+                    btn.disabled = false;
+                    btn.innerHTML = originalHTML;
+                }
+            }
+        }
+
+        function closeCodSuccessModal() {
+            document.getElementById('codSuccessModal').classList.add('hidden');
+        }
+
+        function processOnlinePayment(appName) {
             selectedUPIApp = appName; 
             closePaymentModal(); 
             
@@ -6368,12 +6602,10 @@ function processOnlinePayment(appName) {
         // NAYA: Yeh function Android Studio khud run karega jab payment ka exact result pata chal jayega
         function handlePaymentResult(status) {
             if (status === "SUCCESS") {
-                // Payment 100% SUCCESS hone par hi receipt ka popup khulega
                 document.getElementById('whatsappPromptOverlay').classList.remove('hidden');
             } else if (status === "PENDING") {
                 alert("Payment is pending at the bank. Please check your account.");
             } else {
-                // Payment FAIL ya CANCEL hone par yahan aayega (receipt popup NAHI khulega)
                 alert("Payment failed or cancelled. Please try again.");
             }
         }
