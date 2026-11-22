@@ -5492,36 +5492,80 @@ function updateAdProgressUI() {
     }
 }
 
+let isAdOpening = false;
+let adSafetyTimer = null;
+
 function requestLimitIncrease() {
     updateAdProgressUI(); // Kholne se pehle counter fresh kar lo
     document.getElementById('adConfirmModal').classList.remove('hidden');
+
+    // Popup khulte hi naye APK mein Rewarded Ad silently preload ho jayega
+    if (window.Android && window.Android.preloadRewardedAd) {
+        window.Android.preloadRewardedAd();
+    }
 }
 
 function closeAdModal() {
     document.getElementById('adConfirmModal').classList.add('hidden');
 }
 
-function confirmWatchAd() {
-    closeAdModal(); 
-    watchRewardedAd(); 
+function confirmWatchAd(btn) {
+    if (isAdOpening) return;
+
+    // Old APK safety: jinke paas purana app update hai, unke liye pehle jaisa hi chalega
+    if (!window.Android || !window.Android.preloadRewardedAd) {
+        closeAdModal();
+        watchRewardedAd();
+        return;
+    }
+
+    // Naye APK mein jab tak ad screen par na khule, double-click block rahega
+    isAdOpening = true;
+    if (btn) {
+        btn.dataset.originalText = btn.innerText;
+        btn.innerText = "Loading Ad...";
+        btn.disabled = true;
+        window._activeAdBtn = btn;
+    }
+
+    // Safety timer: slow net par callback miss ho toh 10 sec mein unlock ho jaye
+    clearTimeout(adSafetyTimer);
+    adSafetyTimer = setTimeout(onRewardedAdDone, 10000);
+
+    watchRewardedAd();
 }
 
 function watchRewardedAd() {
     if (window.Android && window.Android.showRewardedAd) {
         window.Android.showRewardedAd();
     } else {
+        onRewardedAdDone();
         alert("Please use the official App to watch ads and unlock slots.");
     }
 }
 
+// Android se ad open hone ya fail hone par ye automatic call hoga
+function onRewardedAdDone() {
+    isAdOpening = false;
+    clearTimeout(adSafetyTimer);
+
+    if (window._activeAdBtn) {
+        window._activeAdBtn.innerText = window._activeAdBtn.dataset.originalText || "Watch Ad";
+        window._activeAdBtn.disabled = false;
+        window._activeAdBtn = null;
+    }
+
+    closeAdModal();
+}
+
 function rewardedAdWatched() {
-    adsWatched++; 
-    localStorage.setItem('alKaynat_AdsWatched', adsWatched); 
-    updateAdProgressUI(); 
+    adsWatched++;
+    localStorage.setItem('alKaynat_AdsWatched', adsWatched);
+    updateAdProgressUI();
 
     if (adsWatched >= 2) {
-        wishlistLimit += 3; 
-        adsWatched = 0; 
+        wishlistLimit += 3;
+        adsWatched = 0;
 
         localStorage.setItem('alKaynat_WishlistLimit', wishlistLimit);
         localStorage.setItem('alKaynat_AdsWatched', adsWatched);
@@ -5530,11 +5574,10 @@ function rewardedAdWatched() {
         updateAdProgressUI();
         alert(`Congratulations! 🎉 Aapne 2 ads dekh liye. Ab aapki wishlist limit ${wishlistLimit} ho gayi hai.`);
     } else {
-        // Agar 1 hi ad dekha hai, toh popup wapas khol do taaki user ko progress bar 50% dikhe
+        // 1st ad ke baad popup wapas khulega aur 2nd ad bhi automatically preload ho jayega
         requestLimitIncrease();
     }
 }
-
         // --- SEARCH FUNCTIONALITY ---
 function updateSearch(query) {
             currentSearchQuery = query.toLowerCase();
